@@ -1,4 +1,4 @@
 # A faire
 
 - [x] tache achevé
-- [] tache inachevé
+- [ ] tache inachevé
