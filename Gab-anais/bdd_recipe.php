@@ -1,11 +1,8 @@
 <?php
-
-session_start()
-
-function get_recipe ()
+function get_recipe()
 {
     #fichier json contenant les recettes
-    $file = "./recipes.json"
+    $file = "./recipes.json";
 
     # récupérer les données du fichier (càd la recette)
     if (file_exists($file))
@@ -22,10 +19,10 @@ function get_recipe ()
 
 
 
-function add_recipe ($r)
+function add_recipe($r)
 {
     #fichier json contenant les recettes
-    $file = "./recipes.json"
+    $file = "./recipes.json";
 
     # récupérer les données du fichier (càd la recette)
     if (file_exists($file))
@@ -53,8 +50,5 @@ function add_recipe ($r)
     #ré-encondage
     $nouveau_contenu = json_encode($data);
     file_put_contents($file,$nouveau_contenu);
-
 }
-
-
 ?>

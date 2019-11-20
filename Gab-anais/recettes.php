@@ -69,7 +69,7 @@
             echo "<ol>";
             foreach ($donnees as $recettes)
             {
-                echo "<li>" . $recettes["image"] . $recettes["titre"] . "</li>";
+                echo "<li> <img src=" . $recettes["image"] . ">\n" . $recettes["titre"] . "</li>";
             }
             echo "</ol>";
         ?>
