@@ -18,3 +18,9 @@ Permet de voir tous les commit fait, pratique pour récupérer une ancienne vers
 Envoie tous les commit sur le cloud en créant un historique de commit. Il est important de faire cette commande après chaque session de travail, afin de mettre à jour ton cloud.
 ### git pull : 
 Permet de récupérer des commit issus de ton cloud. Typiquement, travailler en groupe implique de pouvoir voir et récupérer ce qu’ont fait les autres contributeurs. Effectuer cette commande permet de te mettre à jour, il faut donc la faire **AVANT CHAQUE SESSION de travail ! ! !**
+
+## Site utile 
+### openclassroom bootstrap 
+https://openclassrooms.com/fr/courses/1885491-prenez-en-main-bootstrap/1885777-mise-en-route
+### tester un template 
+https://www.bootply.com/
