@@ -1,26 +1,13 @@
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title> Cockthèque </title>
-    </head>
+<?php include 'entete.html';?>
 
-    <body>
+    
         <h1>Bienvenue sur Cockthèque, la bibliotheque des cocktails </h1>
         <img src="https://www.veuveamiot.fr/user/documents/images/divers/bandeaulegislationalcoolsite.jpg">
         <p>Blablabblablablabal alccol</p>
-    </body>
+
     <div>
         <h2>Nos neuf meilleurs cocktails</h2>
-        <!--
-        <table>
-            <tr>
-                <td><img src="https://cdn.vegaooparty.com/images/blog_idees_fetes/cms/images/final-bierre-au-beurre.jpg"> </td>
-                <td><img src="https://cdn.vegaooparty.com/images/blog_idees_fetes/cms/images/final-bierre-au-beurre.jpg"> </td>
-                <td><img src="https://cdn.vegaooparty.com/images/blog_idees_fetes/cms/images/final-bierre-au-beurre.jpg"> </td>
-            </tr>
 
-        </table>
-        -->
     </div>
     <div id="top_beer">
         <div id="fist_line">
@@ -72,4 +59,5 @@
                 </table>    
         </div>
     </div>
-</html>
+
+    <?php include 'bas_page.html'?>
