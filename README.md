@@ -24,3 +24,6 @@ Permet de récupérer des commit issus de ton cloud. Typiquement, travailler en 
 https://openclassrooms.com/fr/courses/1885491-prenez-en-main-bootstrap/1885777-mise-en-route
 ### tester un template 
 https://www.bootply.com/
+
+### lancer du php 
+php -S localhost:8000
