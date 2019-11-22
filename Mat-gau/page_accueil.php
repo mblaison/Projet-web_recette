@@ -1,10 +1,14 @@
 <?php include 'entete.html';?>
 
     
-    <h1>Bienvenue sur Cockthèque, la bibliotheque des cocktails </h1>
     
     <div class="container">
-        <div class="row">
+    <div style="text-align: center">
+     <h1>Bienvenue sur Cockthèque, la première BU des cocktails  </h1>
+     </div>
+    
+        <div class="row" >
+        
             <div class="col-lg-9">
 
             <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
@@ -36,64 +40,159 @@
         </div> <!-- fini row-->
     </div> <!-- fini container -->
 
+    <div>
+        <h2>Nos neuf meilleurs cocktails</h2>
+    </div>
+
     <div class="row"> 
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <a href="#"><img class="card-img-top" src="https://www.themost10.com/wp-content/uploads/Cocktail-700x400.jpg" alt=""></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="#">Item One</a>
+                </h4>
+                <h5>$24.99</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small> <!-- &#9733 etoile pleine  &#9734 etoile vide  -->
+              </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <a href="#"><img class="card-img-top" src="https://www.visitnewportbeach.com/wp-content/uploads/2019/09/farmhouse-drink-700x400.jpg" alt=""></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="#">Item two</a>
+                </h4>
+                <h5>$24.99</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+              </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <a href="#"><img class="card-img-top" src="https://www.belagarota.com/wp-content/uploads/2019/10/Paille-de-pates-dans-les-bars-italiens-contre-la-pollution-700x400.jpg" alt=""></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="#">Item One</a>
+                </h4>
+                <h5>$24.99</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <a href="#"><img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp8Ji-gPVWcO7S5UTybtALlxX7mfRLaasHN_EuSVVU1uaHzq_l&s" alt=""></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="#">Item two</a>
+                </h4>
+                <h5>$24.99</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <a href="#"><img class="card-img-top" src="https://www.visitnewportbeach.com/wp-content/uploads/2015/01/IMG_23055-700x400.jpg" alt=""></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="#">Item One</a>
+                </h4>
+                <h5>$24.99</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <a href="#"><img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW4NrKQ852J3exVwR_DRAkcmZXh21MLCtiV6B6bvbOUF4-DhUXOw&s" alt=""></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="#">Item two</a>
+                </h4>
+                <h5>$24.99</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <a href="#"><img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMpsncK51SWS3CkSO0q2kQudMwgeNIJVOq5r7RNt4lfbMzTmM83A&s" alt=""></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="#">Item One</a>
+                </h4>
+                <h5>$24.99</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <a href="#"><img class="card-img-top" src="https://teelingwhiskey.com/wp-content/uploads/2019/03/Teeling-Highball-1-700x400.jpg" alt=""></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="#">Item One</a>
+                </h4>
+                <h5>$24.99</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <a href="#"><img class="card-img-top" src="https://www.dineout.co.in/blog/wp-content/uploads/2019/06/oi-700x400.jpg" alt=""></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="#">Item two</a>
+                </h4>
+                <h5>$24.99</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+              </div>
+            </div>
+        </div>
 
     </div> <!-- fini row-->
 
 
-    <div>
-        <h2>Nos neuf meilleurs cocktails</h2>
 
-    </div>
-    <div id="top_beer">
-        <div id="fist_line">
-            <table>
-                <tr>
-                    <td><img src="https://cdn.vegaooparty.com/images/blog_idees_fetes/cms/images/final-bierre-au-beurre.jpg"> </td>
-                    <td><img src="https://cdn.vegaooparty.com/images/blog_idees_fetes/cms/images/final-bierre-au-beurre.jpg"> </td>
-                    <td><img src="https://cdn.vegaooparty.com/images/blog_idees_fetes/cms/images/final-bierre-au-beurre.jpg"> </td>
-                </tr>
-
-                <tr>
-                    <td> bierre au beurre</td>
-                    <td> bierre au beurre</td>
-                    <td> bierre au beurre</td>
-                </tr>
-            </table>    
-        </div>
-
-        <div id="sconde_line">
-            <table>
-                <tr>
-                    <td><img src="https://cdn.vegaooparty.com/images/blog_idees_fetes/cms/images/final-bierre-au-beurre.jpg"> </td>
-                    <td><img src="https://cdn.vegaooparty.com/images/blog_idees_fetes/cms/images/final-bierre-au-beurre.jpg"> </td>
-                    <td><img src="https://cdn.vegaooparty.com/images/blog_idees_fetes/cms/images/final-bierre-au-beurre.jpg"> </td>
-                </tr>
-
-                <tr>
-                    <td> bierre au beurre</td>
-                    <td> bierre au beurre</td>
-                    <td> bierre au beurre</td>
-                </tr>
-
-            </table>    
-        </div>
-
-        <div id="third_line">
-            <table>
-                    <tr>
-                        <td><img src="https://cdn.vegaooparty.com/images/blog_idees_fetes/cms/images/final-bierre-au-beurre.jpg"> </td>
-                        <td><img src="https://cdn.vegaooparty.com/images/blog_idees_fetes/cms/images/final-bierre-au-beurre.jpg"> </td>
-                        <td><img src="https://cdn.vegaooparty.com/images/blog_idees_fetes/cms/images/final-bierre-au-beurre.jpg"> </td>
-                    </tr>
-
-                    <tr>
-                        <td> bierre au beurre</td>
-                        <td> bierre au beurre</td>
-                        <td> bierre au beurre</td>
-                    </tr>
-                </table>    
-        </div>
-    </div>
+   
 
     <?php include 'bas_page.html'?>
