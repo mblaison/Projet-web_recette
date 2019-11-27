@@ -2,64 +2,13 @@
     {
         "titre": "Salade de carottes",
         "type": "entrée",
-        "categorie": "cuisine française",
-        "temps_preparation": 15,
-        "nb_personnes": 4,
-        "auteur": "Martine Roger",
-        "email": "martine.roger@monsupersite.com",
-        "recette": "Ingrédients: 4 carottes, 1 citron, 1 gousse d'ail, huile d'olive\n\nMatériel: couteau, râpe à légumes, tournevis plat\n\nPelez puis râpez les carottes.\nAjoutez rapidement le jus d'un demi citron.\nFaites un petit tour sur vous-même.\nHachez l'ail finement, mélangez aux carottes.\nArrosez d'un filet d'huile d'olive.\n\nC'est prêt !",
+        "composant": "cuisine française",
+        "temps": 15,
         "photo": "https://static.cuisineaz.com/610x610/i30967-carottes-rapees-a-l-orange.jpg",
-        "date": "2019-11-20"
-    }
-
-    {
-        "titre": "Salade de carottes",
-        "type": "entrée",
-        "categorie": "cuisine française",
-        "temps_preparation": 15,
-        "nb_personnes": 4,
-        "auteur": "Martine Roger",
-        "email": "martine.roger@monsupersite.com",
-        "recette": "Ingrédients: 4 carottes, 1 citron, 1 gousse d'ail, huile d'olive\n\nMatériel: couteau, râpe à légumes, tournevis plat\n\nPelez puis râpez les carottes.\nAjoutez rapidement le jus d'un demi citron.\nFaites un petit tour sur vous-même.\nHachez l'ail finement, mélangez aux carottes.\nArrosez d'un filet d'huile d'olive.\n\nC'est prêt !",
-        "photo": "https://static.cuisineaz.com/610x610/i30967-carottes-rapees-a-l-orange.jpg",
-        "date": "2019-11-20"
-    }
-
-    {
-        "titre": "Salade de carottes",
-        "type": "entrée",
-        "categorie": "cuisine française",
-        "temps_preparation": 15,
-        "nb_personnes": 4,
-        "auteur": "Martine Roger",
-        "email": "martine.roger@monsupersite.com",
-        "recette": "Ingrédients: 4 carottes, 1 citron, 1 gousse d'ail, huile d'olive\n\nMatériel: couteau, râpe à légumes, tournevis plat\n\nPelez puis râpez les carottes.\nAjoutez rapidement le jus d'un demi citron.\nFaites un petit tour sur vous-même.\nHachez l'ail finement, mélangez aux carottes.\nArrosez d'un filet d'huile d'olive.\n\nC'est prêt !",
-        "photo": "https://static.cuisineaz.com/610x610/i30967-carottes-rapees-a-l-orange.jpg",
-        "date": "2019-11-20"
-    }
-    {
-        "titre": "Salade de carottes",
-        "type": "entrée",
-        "categorie": "cuisine française",
-        "temps_preparation": 15,
-        "nb_personnes": 4,
-        "auteur": "Martine Roger",
-        "email": "martine.roger@monsupersite.com",
-        "recette": "Ingrédients: 4 carottes, 1 citron, 1 gousse d'ail, huile d'olive\n\nMatériel: couteau, râpe à légumes, tournevis plat\n\nPelez puis râpez les carottes.\nAjoutez rapidement le jus d'un demi citron.\nFaites un petit tour sur vous-même.\nHachez l'ail finement, mélangez aux carottes.\nArrosez d'un filet d'huile d'olive.\n\nC'est prêt !",
-        "photo": "https://static.cuisineaz.com/610x610/i30967-carottes-rapees-a-l-orange.jpg",
-        "date": "2019-11-20"
-    }
-
-    {
-        "titre": "Salade de carottes",
-        "type": "entrée",
-        "categorie": "cuisine française",
-        "temps_preparation": 15,
-        "nb_personnes": 4,
-        "auteur": "Martine Roger",
-        "email": "martine.roger@monsupersite.com",
-        "recette": "Ingrédients: 4 carottes, 1 citron, 1 gousse d'ail, huile d'olive\n\nMatériel: couteau, râpe à légumes, tournevis plat\n\nPelez puis râpez les carottes.\nAjoutez rapidement le jus d'un demi citron.\nFaites un petit tour sur vous-même.\nHachez l'ail finement, mélangez aux carottes.\nArrosez d'un filet d'huile d'olive.\n\nC'est prêt !",
-        "photo": "https://static.cuisineaz.com/610x610/i30967-carottes-rapees-a-l-orange.jpg",
-        "date": "2019-11-20"
+        "date": "2019-11-20",
+        "recette": "Ingrédients: 4 carottes, 1 citron, 1 gousse d'ail, huile d'olive\n\nMatériel: couteau, râpe à légumes, tournevis plat\n\nPelez puis râpez les carottes.\nAjoutez rapidement le jus d'un demi citron.\nFaites un petit tour sur vous-même.\nHachez l'ail finement, mélangez aux carottes.\nArrosez d'un filet d'huile d'olive.\n\nC'est prêt !",        "nb_personnes": 4,
+        "difficulte":3,
+        "adresse": "martine.roger@monsupersite.com"
+        
     }
 ]
