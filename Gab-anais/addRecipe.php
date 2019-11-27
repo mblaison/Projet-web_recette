@@ -58,22 +58,65 @@
     </header>
 
 
+    <div class="hero-search set-bg" data-setbg="img/search-bg.jpg"> </div>
+    <!-- Forulaire d'ajout -->
+    <div class="formulaire">
+        <form>
+            <p>Titre de la recette : </p>
+            <input type="text" name="tire" placeholder="Tarte aux pommes">
 
-    <!-- Liste des recettes -->
-    <section class="recipe-section spad">
-        <?php
-            include ('bdd_recipe.php');
+            <p> Type de la recette : <br/>
+                <input type="radio" name="type_plat" id="entrée">
+                <label for="entrée">Entrée</label>
 
-            $donnees = get_recipe();
+                <input type="radio" name="type_plat" id="plat">
+                <label for="plat">Plat</label>
 
-            echo "<ol>";
-            foreach ($donnees as $recettes)
-            {
-                echo "<li> <img src=" . $recettes["image"] . ">\n" . $recettes["titre"] . "</li>";
-            }
-            echo "</ol>";
-        ?>
-    </section>
+                <input type="radio" name="type_plat" id="dessert">
+                <label for="dessert">Dessert</label>
+            </p>
+
+            <select id="type_cuisine">
+                <option value="française">Française</option>
+                <option value="espagnole">Espagnole</option>
+                <option value="italienne">Italienne</option>
+                <option value="asiatique">Asiatique</option>
+                <option value="africaine">Africaine</option>
+                <option value="maghrébine">Maghrébine</option>
+                <option value="méditérannéenne">Méditérannéenne</option>
+                <option value="américaine">Américaine</option>
+                <option value="anglaise">Anglaise</option>
+            </select>
+
+            <p>Temps de préparation : </p>
+            <input type="number" name="temps" placeholder="15"> minutes
+
+            <p>Nombre de personnes : </p>
+            <input type="number" name="nb_personne" placeholder="4"> personnes
+
+            <p>Pseudo : </p>
+            <input type="text" name="auteur" placeholder="toto">
+
+            <p>Adresse mail : </p>
+            <input type="email" name="email" placeholder="toto.tata@exemple.com">
+
+            <p>Ingrédients nécessaires : </p>
+            <textarea name="ingrédients" rows="10" placeholder="pommes, pâte à tarte, ..."></textarea>
+
+            <p>Instructions de préparation : </p>
+            <textarea name="instructions" rows="10" placeholder="Mettre les pommes dans la pâte ..."></textarea>
+
+            <p>Illustration : </p>
+            <input type="url" name="image">
+
+            <p>Date : </p>
+            <input type="date" name="date_ajout"> 
+
+            <p>
+                <input type="submit" value="valider">
+            </p>
+        </form>
+    </div>
     
 
     <!-- Pied de page -->
