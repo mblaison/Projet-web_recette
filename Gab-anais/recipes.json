@@ -13,6 +13,32 @@
         "date_ajout": "2019-11-20"
     }
 
+    {
+        "titre": "Salade de carottes",
+        "type_plat": "entrée",
+        "type_cuisine": "cuisine française",
+        "temps": 15,
+        "nb_personne": 4,
+        "auteur": "Martine Roger",
+        "email": "martine.roger@monsupersite.com",
+        "ingrédients": "Ingrédients: 4 carottes, 1 citron, 1 gousse d'ail, huile d'olive",
+        "instructions": "Pelez puis râpez les carottes.\nAjoutez rapidement le jus d'un demi citron.\nFaites un petit tour sur vous-même.\nHachez l'ail finement, mélangez aux carottes.\nArrosez d'un filet d'huile d'olive.\n\nC'est prêt !",
+        "image": "https://static.cuisineaz.com/610x610/i30967-carottes-rapees-a-l-orange.jpg",
+        "date_ajout": "2019-11-20"
+    }
 
+    {
+        "titre": "Salade de carottes",
+        "type_plat": "entrée",
+        "type_cuisine": "cuisine française",
+        "temps": 15,
+        "nb_personne": 4,
+        "auteur": "Martine Roger",
+        "email": "martine.roger@monsupersite.com",
+        "ingrédients": "Ingrédients: 4 carottes, 1 citron, 1 gousse d'ail, huile d'olive",
+        "instructions": "Pelez puis râpez les carottes.\nAjoutez rapidement le jus d'un demi citron.\nFaites un petit tour sur vous-même.\nHachez l'ail finement, mélangez aux carottes.\nArrosez d'un filet d'huile d'olive.\n\nC'est prêt !",
+        "image": "https://static.cuisineaz.com/610x610/i30967-carottes-rapees-a-l-orange.jpg",
+        "date_ajout": "2019-11-20"
+    }
 
 ]
