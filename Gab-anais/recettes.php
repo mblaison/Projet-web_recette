@@ -59,6 +59,10 @@
 
 
 
+
+    <div class="hero-search set-bg" data-setbg="img/search-bg.jpg">
+    </div>
+
     <!-- Liste des recettes -->
     <section class="recipe-section spad">
         <?php
@@ -66,12 +70,13 @@
 
             $donnees = get_recipe();
 
-            echo "<ol>";
             foreach ($donnees as $recettes)
             {
-                echo "<li> <img src=" . $recettes["image"] . ">\n" . $recettes["titre"] . "</li>";
+                echo "<div class=\"one_recipe\">";
+                echo "<div class=\"img_recipe\"> <img src=" . $recettes["image"] . "> </div>";
+                echo "<div class=\"title_recipe\"><h1>" . $recettes["titre"] . "</h1></div>";
+                echo "</div>";
             }
-            echo "</ol>";
         ?>
     </section>
     
