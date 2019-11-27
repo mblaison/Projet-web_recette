@@ -1,4 +1,5 @@
 <?php include 'entete.html';?>
+<?php include 'recuperation_recette.php';?>
 
     
     
@@ -43,153 +44,35 @@
     </div> <!-- fini container -->
 
     <div>
-        <h2>Nos neuf meilleurs cocktails</h2>
+        <h2>Nos neuf derniers cocktails</h2>
     </div>
 
     <div class="row"> 
-        <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="https://www.themost10.com/wp-content/uploads/Cocktail-700x400.jpg" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">Item One</a>
-                </h4>
-                <h5>$24.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small> <!-- &#9733 etoile pleine  &#9734 etoile vide  -->
-              </div>
-            </div>
-        </div>
+        <?php
+        $donnees = get_recipe();
 
-        <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="https://www.visitnewportbeach.com/wp-content/uploads/2019/09/farmhouse-drink-700x400.jpg" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">Item two</a>
-                </h4>
-                <h5>$24.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-              </div>
+          for ($i=count($donnees)-1;$i>=count($donnees)-9;$i--)
+          {
+            $recette = $donnees[$i];
+          echo '
+          <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="'. $recette["photo"] .'" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#">'. $recette["titre"] .'</a>
+              </h4>
+              <h5>' . $recette["composant"].'</h5>
+              <p class="card-text">'. $recette["description"] . '</p>
             </div>
-        </div>
-        
-        <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="https://www.belagarota.com/wp-content/uploads/2019/10/Paille-de-pates-dans-les-bars-italiens-contre-la-pollution-700x400.jpg" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">Item One</a>
-                </h4>
-                <h5>$24.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-              </div>
+            <div class="card-footer">
+              <small class="text-muted">' . $recette["difficulte"] .'</small>
             </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp8Ji-gPVWcO7S5UTybtALlxX7mfRLaasHN_EuSVVU1uaHzq_l&s" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">Item two</a>
-                </h4>
-                <h5>$24.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-              </div>
-            </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="https://www.visitnewportbeach.com/wp-content/uploads/2015/01/IMG_23055-700x400.jpg" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">Item One</a>
-                </h4>
-                <h5>$24.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-              </div>
-            </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW4NrKQ852J3exVwR_DRAkcmZXh21MLCtiV6B6bvbOUF4-DhUXOw&s" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">Item two</a>
-                </h4>
-                <h5>$24.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-              </div>
-            </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMpsncK51SWS3CkSO0q2kQudMwgeNIJVOq5r7RNt4lfbMzTmM83A&s" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">Item One</a>
-                </h4>
-                <h5>$24.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-              </div>
-            </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="https://teelingwhiskey.com/wp-content/uploads/2019/03/Teeling-Highball-1-700x400.jpg" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">Item One</a>
-                </h4>
-                <h5>$24.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-              </div>
-            </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="https://www.dineout.co.in/blog/wp-content/uploads/2019/06/oi-700x400.jpg" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">Item two</a>
-                </h4>
-                <h5>$24.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-              </div>
-            </div>
-        </div>
+          </div>
+          </div>
+          ';
+          };
+        ?>
 
     </div> <!-- fini row-->
 </div>
