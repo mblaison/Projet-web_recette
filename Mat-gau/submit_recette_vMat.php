@@ -49,19 +49,29 @@ include 'entete.html'; ?>
 
             <p>
                 <label>Difficulté :</label>
-                <input type="range" name="difficulte" value ="2.5" min="1" max="5" step="0.5">
+                <input type="range" name="difficulte" value ="3" min="1" max="5" step="1">
             </p>
             <p>
                 <label>Temps de préparation (mn) :</label>
                 <input type="number" name="temps" required min="1" max="30" step="5">
             </p>
+
             <p>
-                <textarea name="recette" placeholder="Veuillez saisir les instructions" width="60" height="70"></textarea>
+                Recette de mon cocktail pour <input type="number" name="temps" required min="1" max="100" step="1"> personnes <br/>    
+            </p>
+            <p>
+                <label>Description:</label><br/>
+                <textarea name="description" placeholder="Veuillez saisir une brève description du cocktail (2-3 lignes max)" rows="2" cols="70" ></textarea>
+            </p>
+            <p>
+                <label>Instructions:</label><br/>
+                <textarea name="recette" placeholder="Veuillez saisir les instructions" rows="20" cols="70"></textarea>
             </p>
             <p>
                 <label>Illustration (URL) :</label>
                 <input type="text" name="photo" placeholder="http://exemple_url_image/image.jpg" size="40">
             </p>
+
             <p>
                 <label>Illustration (fichier) :</label>
                 <input type="file" name="photo_fichier" accept="image/jpeg">
@@ -70,11 +80,14 @@ include 'entete.html'; ?>
                 <label>Date d'ajout :</label>
                 <input name="date" type="date">
             </p>
+
             <p>
-            Recette de mon cockatil pour <input type="number" name="temps" required min="1" max="100" step="1"> personnes <br/>    
-            <input type="submit" value="Valider">
+                <label>Adresse email de l'auteur :</label>
+                <input type="email" name="adresse" required placeholder="cocktail@cocktheque.fr">
             </p>
-</p>
+             <input type="submit" value="Valider">
+
+            </p>
     </form>
 
 <?php include 'bas_page.html'; ?>

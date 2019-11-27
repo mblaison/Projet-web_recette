@@ -1,14 +1,16 @@
 <?php
+	session_start();
 
-	$nom = $_REQUEST["titre"]
-	$base = $_REQUEST["base"]
-	$temps = $_REQUEST["temps"]
-	$photo = $_REQUEST["photo"]
-	$photo_fichier = $_REQUEST["photo_fichier"]
-	$date = $_REQUEST["date"]
-	$instruction = $_REQUEST["recette"]
-	$diff = $_REQUEST["difficulty"]
-	$mail = $_REQUEST["adresse"]
+	$nom = $_REQUEST["titre"];
+	$type= $_REQUEST["type"];
+	$composant = $_REQUEST["Composant"];
+	$temps = $_REQUEST["temps"];
+	$photo = $_REQUEST["photo"];
+	$photo_fichier = $_REQUEST["photo_fichier"];
+	$date = $_REQUEST["date"];
+	$instruction = $_REQUEST["recette"];
+	$diff = $_REQUEST["difficulte"];
+	$mail = $_REQUEST["adresse"];
 
 	// conversion de l'indicateur de difficulté (1,2,3,4,5) en barre d'étoiles:
     $diff_1 = "&#9733; &#9734; &#9734; &#9734; &#9734;";
@@ -16,9 +18,12 @@
 	$diff_3 = "&#9733; &#9733; &#9733; &#9734; &#9734;";
     $diff_4 = "&#9733; &#9733; &#9733; &#9733; &#9734;";
     $diff_5 = "&#9733; &#9733; &#9733; &#9733; &#9733;";
-    $diff_tab = [$diff_1, $diff_2, $diff_3, $diff_4, $diff_5]
+    $diff_tab = [$diff_1, $diff_2, $diff_3, $diff_4, $diff_5];
 
-    $diff_et = $diff_tab[$diff -1]
+    // stockage des etoiles en fonction du niveau de difficulte
+    $diff_et = $diff_tab[$diff -1];
+
+
 /*
 	$nouvelEmplacementFichierUploade = null;
     $nomFichierUploade = null;
@@ -28,8 +33,7 @@
         move_uploaded_file($_FILES["photo_fichier"]["tmp_name"], $nouvelEmplacementFichierUploade);
     }
 */
-
-    $emplacement_fichier = "./data.json";
+    $emplacement_fichier = "./bdd.json";
 
     // Si le fichier JSON existe, on passe à la suite
     if (file_exists($emplacement_fichier)) {
@@ -47,27 +51,24 @@
         // liste des informations conservées
         array_push($donnees, [
             "nom" => $nom,
-            "base" => $base,
+            "composant" => $composant,
             "adresse_auteur" => $adresse,
-            "instructions" => $instruction
-            "difficulte" => $diff_et
+            "instructions" => $instruction,
+            "difficulte" => $diff_et, // get_diffEt()
+			//"type" => $type
+			"temps" => $temps,
+			"photo" => $photo,            //get_photo();
+			"date" => $date,
         ]);
+
+        echo $donnees;
 
         // On encode le nouveau contenu
         $nouveau_contenu = json_encode($donnees);
         // On enregistre ce nouveau contenu dans le fichier (on écrase le contenu précédent)
         file_put_contents($emplacement_fichier, $nouveau_contenu);
-
-        // Affichage des recettes
-        echo "<ol>";
-        foreach ($donnees as $rec) {
-            // A. version simple : titre uniquement
-            // echo "<li>" . $rec . "</li>";
-    
-            // B. version à plusieurs variables
-            echo "<li>" . $rec["nom"] . " (" . $rec["base"] . ") - par " . $rec["adresse_auteur"] . " : " . $rec["instruction"] . "</li>";
+ 
         }
-        echo "</ol>";
-    }
+
 
 ?>
