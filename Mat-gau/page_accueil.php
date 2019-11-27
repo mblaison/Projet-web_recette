@@ -4,7 +4,9 @@
     
     <div class="container">
     <div style="text-align: center">
+    <p>
      <h1>Bienvenue sur Cockthèque, la première BU des cocktails  </h1>
+</p>
      </div>
     
         <div class="row" >
@@ -190,7 +192,7 @@
         </div>
 
     </div> <!-- fini row-->
-
+</div>
 
 
    
