@@ -1,16 +1,30 @@
 <?php include 'entete.html';?>
 
-<?php 
-$emplacement_fichier = "./data.json";
-$contenu_fichier = file_get_contents($emplacement_fichier);
-$donnees = json_decode($contenu_fichier, true);
+<?php
+
+
+function get_recipe(){
+    $file = "data.json";
+     if (file_exists($file))
+     {
+         $contenu = file_get_contents($file);
+         $data = json_decode($contenu, true);
+ 
+         if ($data == "") {$data = [];}
+     }
+ 
+     return $data;
+};
+
+$donnees = get_recipe();
 
 echo "<ol>";
-foreach ($donnees as $rec) {
-    echo "<li>" . $rec["titre"] . " (" . $rec["type_cuisine"] . ") - par " . $rec["adresse_auteur"] . " : " . $rec["instructions_recette"] . "</li>";
+foreach ($donnees as $recettes)
+{
+echo "<li> <img src=" . $recettes["photo"] . ">\n" . $recettes["titre"] . "</li>";
 }
 echo "</ol>";
-
 ?>
+
 
 <?php include 'bas_page.html'?>
