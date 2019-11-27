@@ -1,30 +1,37 @@
 <?php include 'entete.html';?>
+<?php include 'recuperation_recette.php';?>
+
+<div class="container">
+<div style="text-align: center">
+<div class="row"> 
 
 <?php
-
-
-function get_recipe(){
-    $file = "data.json";
-     if (file_exists($file))
-     {
-         $contenu = file_get_contents($file);
-         $data = json_decode($contenu, true);
- 
-         if ($data == "") {$data = [];}
-     }
- 
-     return $data;
-};
-
 $donnees = get_recipe();
-
-echo "<ol>";
 foreach ($donnees as $recettes)
 {
-echo "<li> <img src=" . $recettes["photo"] . ">\n" . $recettes["titre"] . "</li>";
-}
-echo "</ol>";
+echo '
+<div class="col-lg-4 col-md-6 mb-4">
+<div class="card h-100">
+  <a href="#"><img class="card-img-top" src="'. $recettes["photo"] .'" alt=""></a>
+  <div class="card-body">
+    <h4 class="card-title">
+      <a href="#">'. $recettes["titre"] .'</a>
+    </h4>
+    <h5>' . $recettes["composant"].'</h5>
+    <p class="card-text">'. $recettes["description"] . '</p>
+  </div>
+  <div class="card-footer">
+    <small class="text-muted">' . $recettes["difficulte"] .'</small>
+  </div>
+</div>
+</div>
+';
+};
 ?>
+
+</div> <!-- fini row-->
+</div> <!-- fini center-->
+</div> <!-- fini container-->
 
 
 <?php include 'bas_page.html'?>

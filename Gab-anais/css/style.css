@@ -1396,6 +1396,44 @@ ol {
 	margin-top: 10px;
 }
 
+/*--------------------------
+  Liste des recettes
+--------------------------*/
+
+.one_recipe {
+	display: block;
+	background: rgba(0, 105, 100, 0.445);
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	width: 90%;
+	border-radius: 3%;
+	
+}
+
+.img_recipe img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 500px;
+	height: 500px;
+	border-radius: 50%;
+}
+
+.title_recipe h1{
+	text-align: center;
+	padding-top: 50px;
+	font-size: 80px;
+	color: white;
+	text-emphasis: bold;
+}
+
+
+
+
 /* ----------------------- Responsive Media Styles ------------------------*/
 
 @media only screen and (min-width: 1550px) and (max-width: 1920px) {

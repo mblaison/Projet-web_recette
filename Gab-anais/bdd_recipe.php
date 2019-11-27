@@ -21,6 +21,19 @@ function get_recipe()
 
 function add_recipe($r)
 {
+
+    $titre = $_REQUEST["titre"];
+    $type = $_REQUEST["type_plat"];
+    $cuisine = $_REQUEST["type_cuisine"];
+    $temps = $_REQUEST["temps"];
+    $personnes = $_REQUEST["nb_personne"];
+    $auteur = $_REQUEST["auteur"];
+    $email = $_REQUEST["email"];
+    $ingrédients = $_REQUEST["ingrédients"];
+    $instructions = $_REQUEST["instructions"];
+    $image = $_REQUEST["image"];
+    $ajout = $_REQUEST["date_ajout"];
+
     #fichier json contenant les recettes
     $file = "./recipes.json";
 
