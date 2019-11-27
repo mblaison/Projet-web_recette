@@ -776,6 +776,8 @@ ol {
 
 .header-section-other .logo {
 	float: left;
+	width: 250px;
+
 }
 
 .header-section-other .logo a {
@@ -853,56 +855,6 @@ ol {
 	opacity: 0;
 	-webkit-transition: all 0.2s;
 	transition: all 0.2s;
-}
-
-.header-section-other .nav-menu .main-menu ul li:hover .sub-menu {
-	visibility: visible;
-	opacity: 1;
-	margin-top: 16px;
-}
-
-.header-section-other .nav-menu .main-menu ul .sub-menu {
-	position: absolute;
-	list-style: none;
-	width: 220px;
-	left: 0;
-	top: 100%;
-	padding: 20px 0 10px;
-	visibility: hidden;
-	opacity: 0;
-	margin-top: 50px;
-	text-align: left;
-	background: #fff;
-	z-index: 99;
-	-webkit-transition: all 0.4s;
-	transition: all 0.4s;
-	-webkit-box-shadow: 2px 7px 20px rgba(0, 0, 0, 0.05);
-	box-shadow: 2px 7px 20px rgba(0, 0, 0, 0.05);
-}
-
-.header-section-other .nav-menu .main-menu ul .sub-menu li {
-	display: block;
-	margin-right: 0;
-}
-
-.header-section-other .nav-menu .main-menu ul .sub-menu li:after {
-	display: none;
-}
-
-.header-section-other .nav-menu .main-menu ul .sub-menu li a {
-	display: block;
-	color: #000;
-	margin-left: 0;
-	padding: 5px 20px;
-	font-size: 16px;
-}
-
-.header-section-other .nav-menu .main-menu ul .sub-menu li a:after {
-	display: none;
-}
-
-.header-section-other .nav-menu .main-menu ul .sub-menu li a:hover {
-	color: #FC0254;
 }
 
 .header-section-other .nav-menu .nav-right {
