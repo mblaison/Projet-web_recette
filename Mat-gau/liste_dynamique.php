@@ -2,7 +2,8 @@
 
 
 
-	<form action="traitement_recherche.php" method="POST" enctype="multipart/form-data">>
+	<form action="traitement_recherche.php" method="POST" enctype="multipart/form-data">
+	<p>
 		<label><h3>Recherche de recettes</h3></label><br/>
 		<input type="text" size="50" name="Recherche Recette" id="research_text">
 			
@@ -39,7 +40,7 @@
 		</p>
 		</div>
 		<input type="submit" value="Rechercher" id="submit_research">
-
+</p>
 	</form>
 
 
