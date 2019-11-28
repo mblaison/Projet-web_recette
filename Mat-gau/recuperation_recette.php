@@ -2,7 +2,7 @@
 
 
 function get_recipe(){
-    $file = "data.json";
+    $file = "bdd.json";
      if (file_exists($file))
      {
          $contenu = file_get_contents($file);
