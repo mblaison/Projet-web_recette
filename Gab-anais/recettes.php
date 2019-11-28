@@ -21,10 +21,6 @@
 
 
 
-    <!-- Liste des recettes -->
-    <link href="./bdd_recipe.php">
-
-
 </head>
 
 <body>
