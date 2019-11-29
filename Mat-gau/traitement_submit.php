@@ -8,6 +8,7 @@
 	$photo = $_REQUEST["photo"];
 	$photo_fichier = $_REQUEST["photo_fichier"];
 	$date = $_REQUEST["date"];
+	$desc = $_REQUEST["description"];
 	$instruction = $_REQUEST["recette"];
 	$diff = $_REQUEST["difficulte"];
 	$mail = $_REQUEST["adresse"];
@@ -53,9 +54,10 @@
             "nom" => $nom,
             "composant" => $composant,
             "adresse_auteur" => $adresse,
+            "description" => $desc,
             "instructions" => $instruction,
             "difficulte" => $diff_et, // get_diffEt()
-			//"type" => $type
+			"type" => $type,
 			"temps" => $temps,
 			"photo" => $photo,            //get_photo();
 			"date" => $date,
@@ -64,9 +66,9 @@
         echo $donnees;
 
         // On encode le nouveau contenu
-        $nouveau_contenu = json_encode($donnees);
-        // On enregistre ce nouveau contenu dans le fichier (on écrase le contenu précédent)
-        file_put_contents($emplacement_fichier, $nouveau_contenu);
+        $nouveau_contenu = json_encode($donnees) ."\n";
+        file_put_contents($emplacement_fichier, $nouveau_contenu,FILE_APPEND);
+        //file_put_contents($emplacement_fichier, "\n");
  
         }
 

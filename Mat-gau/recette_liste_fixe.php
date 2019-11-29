@@ -1,8 +1,9 @@
 <?php include 'entete.html';?>
 <?php include 'recuperation_recette.php';?>
-
+<div>
 <div class="container">
 <div style="text-align: center">
+<h1> Toute nos recette depuis la creation du site </h1>
 <div class="row"> 
 
 <?php
@@ -32,6 +33,6 @@ echo '
 </div> <!-- fini row-->
 </div> <!-- fini center-->
 </div> <!-- fini container-->
-
+</div>
 
 <?php include 'bas_page.html'?>
