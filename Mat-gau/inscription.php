@@ -1,7 +1,7 @@
 <?php
 
-$email = $_REQUEST["email"];
-$mdp = $_REQUEST["mdp"];
+$email = $_REQUEST["adresse_email"];
+$pwd = $_REQUEST["mot_de_passe"];
 $mdpchif = md5($mdp);
 
 
@@ -23,7 +23,7 @@ if (file_exists($emplacement_fichier)) {
     // liste des informations conservées
     array_push($donnees, [
         "email" => $email,
-        "mdp" => $mdpchif,
+        "pwd" => $mdpchif,
     ]);
 
     $nouveau_contenu = json_encode($donnees);
