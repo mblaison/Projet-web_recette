@@ -1,7 +1,7 @@
 <?php
 
 $email = $_REQUEST["adresse_email"];
-$pwd = $_REQUEST["mot_de_passe"];
+$mdp = $_REQUEST["mot_de_passe"];
 $mdpchif = md5($mdp);
 
 

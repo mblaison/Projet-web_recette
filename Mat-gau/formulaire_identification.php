@@ -1,6 +1,6 @@
 <?php include 'entete.html';?>
 
-<h1>Connexion au site (si vous avez déjà un compte)</h1>
+<p></p>
         <form method="post" action="connexion.php">
             <p>
                 <label for="email">Adresse email : </label>
