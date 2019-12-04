@@ -1,6 +1,6 @@
 <?php
 
-get_formData(){
+function get_formData(){
 	$nom = $_REQUEST["titre"];
 	$type= $_REQUEST["type"];
 	$composant = $_REQUEST["Composant"];
@@ -23,9 +23,25 @@ get_formData(){
 
     // stockage des etoiles en fonction du niveau de difficulte
     $diff_et = $diff_tab[$diff -1];
+
+    $form_data = [];
+    array_push($form_data,[
+    	"nom" => $nom,
+        "composant" => $composant,
+        "adresse_auteur" => $adresse,
+        "description" => $desc,
+        "instructions" => $instruction,
+        "difficulte" => $diff_et, // get_diffEt()
+		"type" => $type,
+		"temps" => $temps,
+		"photo" => $photo,            //get_photo();
+		"date" => $date,
+    ]);
+
+    return $form_data;
 };
 
-get_cocktail($formulaire_data){
+function get_cocktail($form_data){
     $json_file = "./bdd.json";
 
     // Si le fichier JSON existe, on passe à la suite
@@ -34,42 +50,36 @@ get_cocktail($formulaire_data){
         $json_data = file_get_contents($json_file);
         // Décodage du format de fichier : on obtient un tableau
         $cocktails_array = json_decode($json_data, true);
+        
+
         // La première fois, si le fichier était vide, on initialise le
         // contenu avec un nouveau tableau vide
         if ($cocktails_array == "") {
-            $cocktails_array = [];
-        }
+            $cocktails_array = []; 
+        };
 
         // On ajoute les informations reçues du formulaire, à la
         // liste des informations conservées
-        array_push($cocktails_array, [
-            "nom" => $nom,
-            "composant" => $composant,
-            "adresse_auteur" => $adresse,
-            "description" => $desc,
-            "instructions" => $instruction,
-            "difficulte" => $diff_et, // get_diffEt()
-			"type" => $type,
-			"temps" => $temps,
-			"photo" => $photo,            //get_photo();
-			"date" => $date,
-        ]);
+        array_push($cocktails_array, $form_data );
 
      return $cocktails_array;
 	
 };
 
-add_CocktailToJSON($cocktails_array){
+function add_CocktailToJSON($cocktails_array){
     $json_file = "./bdd.json";
 
-    // On encode le nouveau contenu
     $json_contents = json_encode($cocktails_array);
-    //$nouveau_contenu = json_encode($donnees) ."\n";
-    //file_put_contents($json_file, $json_contents,FILE_APPEND);
     file_put_contents($json_file, $json_contents);
-    //file_put_contents($emplacement_fichier, "\n");
 
 
 };
+
+//echo(get_formData()[1]);
+
+
+//add_CocktailToJSON(get_cocktail(get_formData()));
+
+//cho $cocktails_array[0];
 
 ?>
