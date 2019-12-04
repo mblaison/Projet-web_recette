@@ -7,6 +7,6 @@ $ok = $_SESSION["connexion"];
 if ($ok) {
     echo 'Vous êtes connecté !<br><a href="deconnexion.php">se déconnecter</a>';
 } else {
-    echo 'Vous n\'êtes pas connecté.<br><a href="formulaire_connexion.php">essayer à nouveau</a>';
+    echo 'Vous n\'êtes pas connecté.<br><a href="formulaire_identification.php">essayer à nouveau</a>';
 }
 ?>
