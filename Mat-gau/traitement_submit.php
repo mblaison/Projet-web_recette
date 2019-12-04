@@ -66,9 +66,10 @@
         echo $donnees;
 
         // On encode le nouveau contenu
-        $nouveau_contenu = json_encode($donnees) ."\n";
-        file_put_contents($emplacement_fichier, $nouveau_contenu,FILE_APPEND);
-        //file_put_contents($emplacement_fichier, "\n");
+        $nouveau_contenu = json_encode($donnees);
+        //$nouveau_contenu = json_encode($donnees) ."\n";
+        //file_put_contents($emplacement_fichier, $nouveau_contenu,FILE_APPEND);
+        file_put_contents($emplacement_fichier, "\n");
  
         }
 

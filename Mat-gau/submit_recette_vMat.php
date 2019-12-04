@@ -7,9 +7,36 @@
 }*/
 include 'entete.html'; ?>
 
+<style type="text/css">
+    
+form{
+  border: 1px ;
+  border-style: solid ;
+  border-color: #d1cdcd;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  padding: 16px 32px;
+}
+
+input[type=submit] {
+  background-color: #cc3c14;
+  border: 1px hidden;
+  border-radius: 100px;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+    
+    <p>
+        
+    </p>
 	<form action="traitement_submit.php" method="POST" enctype="multipart/form-data">
 
-            <p>
             <label><h5>Nom du cocktail :</h5></label><br/>
             <p>
                 <input type="text" required name="titre" placeholder="Mojito" size="40" pattern="^[^0-9]+$">
