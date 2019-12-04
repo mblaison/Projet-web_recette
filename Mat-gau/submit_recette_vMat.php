@@ -6,11 +6,13 @@
 
 }*/
 include 'entete.html'; ?>
-
+    
+    <script type="text/javascript" src="add_cocktail.js"></script>
     <p>
         
     </p>
-	<form action="bdd.php" method="POST" enctype="multipart/form-data">
+	<!--<form action="bdd.php" method="POST" enctype="multipart/form-data">-->
+    <form id="formulaire">
 
             <label><h5>Nom du cocktail :</h5></label><br/>
             <p>
@@ -55,7 +57,7 @@ include 'entete.html'; ?>
             </p>
             <p>
                 <label>Temps de préparation (mn) :</label>
-                <input type="number" name="temps" required min="1" max="30" step="5">
+                <input type="number" name="temps" required min="1" max="30" step="1">
             </p>
 
             <p>
@@ -74,10 +76,10 @@ include 'entete.html'; ?>
                 <input type="text" name="photo" placeholder="http://exemple_url_image/image.jpg" size="40">
             </p>
 
-            <p>
+           <!-- <p>
                 <label>Illustration (fichier) :</label>
                 <input type="file" name="photo_fichier" accept="image/jpeg">
-            </p>
+            </p> -->
             <p>
                 <label>Date d'ajout :</label>
                 <input name="date" type="date">
@@ -87,7 +89,7 @@ include 'entete.html'; ?>
                 <label>Adresse email de l'auteur :</label>
                 <input type="email" name="adresse" required placeholder="cocktail@cocktheque.fr">
             </p>
-             <input type="submit" value="Valider">
+             <input type="submit" value="Valider" id="envoi">
 
             </p>
     </form>

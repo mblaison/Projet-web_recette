@@ -6,7 +6,6 @@ function get_formData(){
 	$composant = $_REQUEST["Composant"];
 	$temps = $_REQUEST["temps"];
 	$photo = $_REQUEST["photo"];
-	$photo_fichier = $_REQUEST["photo_fichier"];
 	$date = $_REQUEST["date"];
 	$desc = $_REQUEST["description"];
 	$instruction = $_REQUEST["recette"];
@@ -28,20 +27,20 @@ function get_formData(){
     array_push($form_data,[
     	"nom" => $nom,
         "composant" => $composant,
-        "adresse_auteur" => $adresse,
+        "adresse_auteur" => $mail,
         "description" => $desc,
         "instructions" => $instruction,
-        "difficulte" => $diff_et, // get_diffEt()
+        "difficulte" => $diff_et, 
 		"type" => $type,
 		"temps" => $temps,
-		"photo" => $photo,            //get_photo();
+		"photo" => $photo,            
 		"date" => $date,
-    ]);
+    	"id_cocktail" => md5(rand())]);
 
     return $form_data;
-};
+}
 
-function get_cocktail($form_data){
+function get_cocktail(){
     $json_file = "./bdd.json";
 
     // Si le fichier JSON existe, on passe à la suite
@@ -51,35 +50,24 @@ function get_cocktail($form_data){
         // Décodage du format de fichier : on obtient un tableau
         $cocktails_array = json_decode($json_data, true);
         
+    return $cocktails_array;
+	}
+}
 
-        // La première fois, si le fichier était vide, on initialise le
-        // contenu avec un nouveau tableau vide
-        if ($cocktails_array == "") {
-            $cocktails_array = []; 
-        };
-
-        // On ajoute les informations reçues du formulaire, à la
-        // liste des informations conservées
-        array_push($cocktails_array, $form_data );
-
-     return $cocktails_array;
-	
-};
-
-function add_CocktailToJSON($cocktails_array){
+function add_CocktailToJSON($cocktails_array,$form_data){
     $json_file = "./bdd.json";
+
+    if ($cocktails_array == "") {
+        $cocktails_array = []; 
+    };
+
+    array_push($cocktails_array, $form_data );
+
 
     $json_contents = json_encode($cocktails_array);
     file_put_contents($json_file, $json_contents);
+}
 
-
-};
-
-//echo(get_formData()[1]);
-
-
-//add_CocktailToJSON(get_cocktail(get_formData()));
-
-//cho $cocktails_array[0];
+//add_CocktailToJSON(get_cocktail(),get_formData());
 
 ?>
