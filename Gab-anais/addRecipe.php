@@ -21,9 +21,7 @@
 
 
 
-    <!-- Liste des recettes -->
-    <link href="./bdd_recipe.php">
-
+    <script src="./form_recette.js"></script>
 
 </head>
 
@@ -61,22 +59,24 @@
     <div class="hero-search set-bg" data-setbg="img/search-bg.jpg"> </div>
     <!-- Forulaire d'ajout -->
     <div class="formulaire">
-        <form>
+        <form id="ajout_recette" action="./form_recette.php" method="post">
+            
             <p>Titre de la recette : </p>
-            <input type="text" name="tire" placeholder="Tarte aux pommes">
+            <input type="text" name="titre" placeholder="Tarte aux pommes">
 
             <p> Type de la recette : <br/>
-                <input type="radio" name="type_plat" id="entrée">
+                <input type="radio" name="type_plat" value = "Entrée" id="entrée">
                 <label for="entrée">Entrée</label>
 
-                <input type="radio" name="type_plat" id="plat">
+                <input type="radio" name="type_plat" value = "Plat" id="plat">
                 <label for="plat">Plat</label>
 
-                <input type="radio" name="type_plat" id="dessert">
+                <input type="radio" name="type_plat" value = "Dessert" id="dessert">
                 <label for="dessert">Dessert</label>
             </p>
 
-            <select id="type_cuisine">
+            <select name = "type_cuisine" id="type_cuisine">
+                <option value=""></option>
                 <option value="française">Française</option>
                 <option value="espagnole">Espagnole</option>
                 <option value="italienne">Italienne</option>

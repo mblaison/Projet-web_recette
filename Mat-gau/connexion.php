@@ -8,7 +8,7 @@ $comptes = json_decode(file_get_contents("./compte.json"), true);
 
 $trouve = false;
 foreach ($comptes as $c) {
-    if ($c["adresse"] == $adresse && $c["mdp"] == md5($mdp)) {
+    if ($c["email"] == $adresse && $c["pwd"] == md5($mdp)) {
         $trouve = true;
     }
 }
@@ -16,4 +16,6 @@ foreach ($comptes as $c) {
 $_SESSION["connexion"] = $trouve;
 
 header("Location: status.php");
+
+
 ?>
