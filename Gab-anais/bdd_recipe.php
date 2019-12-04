@@ -21,19 +21,6 @@ function get_recipe()
 
 function add_recipe($r)
 {
-
-    $titre = $_REQUEST["titre"];
-    $type = $_REQUEST["type_plat"];
-    $cuisine = $_REQUEST["type_cuisine"];
-    $temps = $_REQUEST["temps"];
-    $personnes = $_REQUEST["nb_personne"];
-    $auteur = $_REQUEST["auteur"];
-    $email = $_REQUEST["email"];
-    $ingrédients = $_REQUEST["ingrédients"];
-    $instructions = $_REQUEST["instructions"];
-    $image = $_REQUEST["image"];
-    $ajout = $_REQUEST["date_ajout"];
-
     #fichier json contenant les recettes
     $file = "./recipes.json";
 
@@ -43,22 +30,10 @@ function add_recipe($r)
         $contenu = file_get_contents($file);
         $data = json_decode($contenu, true);
 
-        if ($data == "") { $data = [];}
+        ##if ($data == "") { $data = [];}
     }
 
-    array_push($data, [
-        "titre" => $titre,
-        "type_plat" => $type,
-        "type_cuisine" => $cuisine,
-        "temps" => $temps,
-        "nb_personne" => $personnes,
-        "auteur" => $auteur,
-        "email" => $email,
-        "ingrédients" => $ingrédients,
-        "instructions" => $instructions,
-        "image" => $image,
-        "date_ajout" => $ajout
-    ]);
+    array_push($data,$r);
 
     #ré-encondage
     $nouveau_contenu = json_encode($data);
