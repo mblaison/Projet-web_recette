@@ -2,25 +2,25 @@
 <?php include 'recuperation_recette.php';?>
 
     
-    
+<div class="core"> <!-- div qui englobe tous les éléments. Permet de créer un cadre autour de tous les éléments -->
     <div class="container">
     <div style="text-align: center">
     <p>
      <h1>Bienvenue sur Cockthèque, la première BU des cocktails  </h1>
-</p>
+    </p>
      </div>
     
         <div class="row" style="text-align: center" >
         
-            <div class="col-lg-9" >
+            <div class="col-lg-9" id="caroussel">
 
-            <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel" >
+            <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel"  >
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
             </ol>
-            <div class="carousel-inner" role="listbox">
+            <div class="carousel-inner" role="listbox" >
                 <div class="carousel-item active">
                 <img class="d-block img-fluid" src="https://www.urbankitsupply.com/wp/en/wp-content/uploads/sites/4/2018/12/Glogi-Drink-Main-image-2-900x350.jpg" alt="First slide">
                 </div>
@@ -76,6 +76,8 @@
 
     </div> <!-- fini row-->
 </div>
+</div>
+
 
 
    

@@ -2,10 +2,11 @@
 <script type="text/javascript" src="formulaire_inscription.js"></script>
 
 
+
+<form method="post" action="inscription.php">
 <div style="text-align: center">
 <h1>Inscris toi sur le site pour pouvoir poster tes meilleurs cocktails </h1>
 </div>
-<form method="post" action="inscription.php">
 <div style="text-align: center">
     <p>
         <label for="email"> Votre Adresse Email : </label>

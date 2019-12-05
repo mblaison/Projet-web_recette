@@ -90,7 +90,9 @@ include 'entete.html'; ?>
                 <input type="email" name="adresse" required placeholder="cocktail@cocktheque.fr">
             </p>
              <input type="submit" value="Valider" id="envoi">
-
+            </p>
+            <p id="msg_valid">
+                
             </p>
     </form>
 

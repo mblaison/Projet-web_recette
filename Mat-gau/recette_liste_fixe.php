@@ -1,6 +1,6 @@
 <?php include 'entete.html';?>
 <?php include 'recuperation_recette.php';?>
-<div>
+<div class="core">
 <div class="container">
 <div style="text-align: center">
 <h1> Toute nos recette depuis la creation du site </h1>
@@ -10,6 +10,8 @@
 $donnees = get_recipe();
 foreach ($donnees as $recettes)
 {
+$recettes = $recettes[0];
+//print_r($recettes[0]);
 echo '
 <div class="col-lg-4 col-md-6 mb-4">
 <div class="card h-100">
