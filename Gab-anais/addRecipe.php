@@ -44,7 +44,7 @@
                             <li><a href="recettes.php">Recettes</a></li>
                             <li><a href="recherche.php">Recherche</a></li>
                             <li><a href="addRecipe.php">Ajout</a></li>
-                            <li><a href="identification.html">S'identifier</a></li>
+                            <li><a href="connexion.php">S'identifier</a></li>
                         </ul>
                     </nav>
                 </div>

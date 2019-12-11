@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
 
+    <script src="./form_connexion.js"></script>
+
 
 </head>
 
@@ -41,7 +43,7 @@
                             <li><a href="recettes.php">Recettes</a></li>
                             <li><a href="recherche.php">Recherche</a></li>
                             <li><a href="addRecipe.php">Ajout</a></li>
-                            <li><a href="identification.html">S'identifier</a></li>
+                            <li><a href="connexion.php">S'identifier</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -59,16 +61,18 @@
     </div>
 
 
-    <div class="formulaire">
-        <form id="connexion" action="./form_connexion.php" method="post">
+        <div class="formulaire">
+            <form id="identification" action="./form_connexion.php" method="post">
 
-            <p>Login : </p>
-            <input type="text" name="login" placeholder="toto" required>
+                <p>Login : </p>
+                <input type="text" name="login" placeholder="toto" required>
 
-            <p>Mot de passe : </p>
-            <input type="password" name="mdp" required>
+                <p>Mot de passe : </p>
+                <input type="password" name="mdp" required>
 
+                <input type="submit" value="Connexion">
 
+        </form>
 
 
 
