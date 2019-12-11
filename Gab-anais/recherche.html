@@ -56,15 +56,11 @@
     <div class="hero-search set-bg" data-setbg="img/search-bg.jpg">
         <div class="container">
             <div class="filter-table">
-                <form action="#" class="filter-search">
-                    <input type="text" placeholder="Search recipe">
-                    <select id="category">
-                        <option value="">Category</option>
-                    </select>
-                    <select id="tag">
-                        <option value="">Tags</option>
-                    </select>
-                    <button type="submit">Search</button>
+                <form class="filter-search" id="recherche" action="./form_recherche.php" method="GET">
+
+                    <input name="r_wanted" type="text" placeholder="Muffin au chocolat">
+
+                    <button type="submit">Chercher</button>
                 </form>
             </div>
         </div>
@@ -75,20 +71,6 @@
 
     <!-- Single Recipe Section Begin -->
     <section class="single-page-recipe spad">
-        <div class="recipe-top">
-            <div class="container-fluid">
-                <div class="recipe-title">
-                    <span>~ 5 ingredients / 20 minutes / easy / japanese/ recipe</span>
-                    <h2>Chipotle Sweet Potato Noodle Salad <br /> with Roasted Corn</h2>
-                    <ul class="tags">
-                        <li>Desert</li>
-                        <li>Asian</li>
-                        <li>Spicy</li>
-                    </ul>
-                </div>
-                <img src="img/recipe-single.jpg" alt="">
-            </div>
-        </div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-5">
@@ -96,14 +78,6 @@
                         <div class="intro-item">
                             <img src="img/intro-img.jpg" alt="">
                             <h2>Chipotle Sweet Potato Noodle with Roasted Corn</h2>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="reviews">4.9 from 25 reviews</div>
                             <div class="recipe-time">
                                 <ul>
                                     <li>Prep time: <span>10 min</span></li>
@@ -120,41 +94,18 @@
                             <div class="list-item">
                                 <h5>Ingredients</h5>
                                 <div class="salad-list">
-                                    <h6>For the salad</h6>
                                     <ul>
                                         <li>1 brick of frozen udon</li>
                                         <li>1/2 cup kimchi, plus a bit of kimchi juice</li>
                                         <li>1 tablespoon of butter</li>
                                         <li>1 sac of mentaiko</li>
                                         <li>sliced green onions and nori, to finish</li>
-                                    </ul>
-                                </div>
-                                <div class="dressing-list">
-                                    <h6>For the dressing</h6>
-                                    <ul>
-                                        <li>1 brick of frozen udon</li>
-                                        <li>1/2 cup kimchi, plus a bit of kimchi juice</li>
-                                        <li>1 tablespoon of butter</li>
-                                        <li>1 sac of mentaiko</li>
-                                        <li>sliced green onions and nori, to finish</li>
-                                        <li>1 tablespoon of butter</li>
-                                        <li>1 sac of mentaiko</li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="nutrition-fact">
-                        <div class="nutri-title">
-                            <h6>Nutrition Facts</h6>
-                            <span>Serves 4</span>
-                        </div>
-                        <ul>
-                            <li>Total Fat : 20.4g</li>
-                            <li>Cholesterol : 2%</li>
-                            <li>Chalories: 345</li>
-                        </ul>
-                    </div>
+
                 </div>
                 <div class="col-lg-7">
                     <div class="recipe-right">
@@ -222,25 +173,6 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="notes">
-                            <h3>Notes</h3>
-                            <div class="notes-item">
-                                <span>i</span>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet. Donec in
-                                    sodales dui, a blandit nunc. Pellentesque id eros venenatis, sollicitudin neque
-                                    sodales, vehicula nibh. Nam massa odio, porttitor vitae efficitur non, ultricies
-                                    volutpat tellus. Cras egestas in lacus a finibus. Suspendisse sed urna at elit
-                                    condimentum viverra.</p>
-                            </div>
-                            <div class="notes-item">
-                                <span>i</span>
-                                <p>Donec in sodales dui, a blandit nunc. Pellentesque id eros venenatis, sollicitudin
-                                    neque sodales, vehicula nibh. Nam massa odio, porttitor vitae efficitur non,
-                                    ultricies volutpat tellus. Cras egestas in lacus a finibus. Suspendisse sed urna at
-                                    elit condimentum viverra.</p>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -253,7 +185,8 @@
     
     <footer class="footer-section">
         <div class="container">
-            <p>Ce site web a été élaboré dans le cadre de l'UE HMIN115M - Technologies du Web.</p>
+            <p>© Gabrielle Pozo & Anaïs Louis</p>
+            <p>Mise à jour le 10/12/19</p>
         </div>
     </footer>
 
