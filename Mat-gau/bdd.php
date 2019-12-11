@@ -87,6 +87,6 @@ function del_cocktail($id){
 
 $research = $_REQUEST["Recherche Recette"];
 
-search_cocktail($research,'dsfdghgfdssdfg Vodka');
+search_cocktail($research,get_cocktail());
 
 ?>
