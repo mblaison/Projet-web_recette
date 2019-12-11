@@ -37,4 +37,4 @@ echo '
 </div> <!-- fini container-->
 </div>
 
-<?php include 'bas_page.html'?>
+<?php include 'bas_page.php'?>
