@@ -14,7 +14,7 @@ function get_recipe($r)
 
 
         ## Si on veut afficher toutes les recettes
-        if ($r == "all" ) {
+        if ($r == "" ) {
             return $data;
         }
         
@@ -24,10 +24,10 @@ function get_recipe($r)
 
             foreach ($data as $recette) {
                 foreach ($recette as $element) {
-                    $pos = strpos($element, $r);
+                    $pos = stripos($element, $r);
 
                     ## si il trouve une correspondance, ajouter la recette dans le nouvel array
-                    if ($pos === true) {
+                    if ($pos !== false) {
                         array_push($result_search,$recette);
                     }
 

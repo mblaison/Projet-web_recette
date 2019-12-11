@@ -39,7 +39,7 @@
                         <ul>
                             <li><a href="accueil.html">Accueil</a></li>
                             <li><a href="recettes.php">Recettes</a></li>
-                            <li><a href="recherche.html">Recherche</a></li>
+                            <li><a href="recherche.php">Recherche</a></li>
                             <li><a href="addRecipe.php">Ajout</a></li>
                             <li><a href="identification.html">S'identifier</a></li>
                         </ul>
@@ -63,7 +63,7 @@
         <?php
             include ('bdd_recipe.php');
 
-            $donnees = get_recipe("all");
+            $donnees = get_recipe();
 
             foreach ($donnees as $recettes)
             {

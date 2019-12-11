@@ -18,6 +18,10 @@
     <link rel="stylesheet" href="css/nice-select.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+
+
+    <script src="./form_recherche.js"></script>
+
 </head>
 
 <body>
@@ -37,7 +41,7 @@
                         <ul>
                             <li><a href="accueil.html">Accueil</a></li>
                             <li><a href="recettes.php">Recettes</a></li>
-                            <li><a href="recherche.html">Recherche</a></li>
+                            <li><a href="recherche.php">Recherche</a></li>
                             <li><a href="addRecipe.php">Ajout</a></li>
                             <li><a href="identification.html">S'identifier</a></li>
                         </ul>
@@ -56,7 +60,7 @@
     <div class="hero-search set-bg" data-setbg="img/search-bg.jpg">
         <div class="container">
             <div class="filter-table">
-                <form class="filter-search" id="recherche" action="./form_recherche.php" method="GET">
+                <form class="filter-search" id="recherche" action="./form_recherche.php" method="POST">
 
                     <input name="r_wanted" type="text" placeholder="Muffin au chocolat">
 

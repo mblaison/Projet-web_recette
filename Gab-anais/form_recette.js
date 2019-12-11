@@ -5,7 +5,7 @@ window.addEventListener("DOMContentLoaded", function() {
         var data = new FormData(formulaire); //récuoère champs formulaire
         var requete = new XMLHttpRequest();
 		// on envoie la requête à l'URL du webservice
-		requete.open("POST", "form_recette.php");
+		requete.open("GET", "form_recette.php");
         requete.send(data);
     });
 
