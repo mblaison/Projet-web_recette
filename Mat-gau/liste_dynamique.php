@@ -1,8 +1,8 @@
 <?php include 'entete.html'; ?>
 
 
-
-	<form action="traitement_recherche.php" method="POST" enctype="multipart/form-data">
+	<div class="core">
+	<form action="bdd.php" method="POST" enctype="multipart/form-data">
 	<p>
 		<label><h3>Recherche de recettes</h3></label><br/>
 		<input type="text" size="50" name="Recherche Recette" id="research_text">
@@ -40,8 +40,15 @@
 		</p>
 		</div>
 		<input type="submit" value="Rechercher" id="submit_research">
-</p>
+		</p>
 	</form>
+
+	<div>
+		<h2>
+			Résultat de la Recherche:
+		</h2>
+	</div>
+	</div>
 
 
 <?php include 'bas_page.html'; ?>

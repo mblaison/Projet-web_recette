@@ -46,3 +46,23 @@ div[id="caroussel"]{
   margin-right: auto;
   width:100%;  
 }
+
+
+
+/*permet de fixer la position du footer en bas de page*/
+html,body{
+  height: 100%;
+  margin: 0;
+  
+}
+
+footer {
+    /*position: relative;*/
+    margin-top:auto;
+}
+
+body{ 
+  display:flex; 
+  flex-direction:column; 
+}
+

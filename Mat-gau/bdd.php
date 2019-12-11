@@ -70,4 +70,23 @@ function add_CocktailToJSON($cocktails_array,$form_data){
 
 //add_CocktailToJSON(get_cocktail(),get_formData());
 
+function search_cocktail($research,$cocktails_array){
+
+    foreach ($cocktails_array as $cocktail){
+        $cocktail= $cocktail[0]
+        foreach ($cocktail as $cocktail_item){
+            preg_match('/'.$research.'/i', $cocktail_item, $matches);
+            print_r($matches);
+        };
+    };
+}
+
+function del_cocktail($id){
+    $a=0;
+}
+
+$research = $_REQUEST["Recherche Recette"];
+
+search_cocktail($research,'dsfdghgfdssdfg Vodka');
+
 ?>
