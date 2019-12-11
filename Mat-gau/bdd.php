@@ -23,8 +23,7 @@ function get_formData(){
     // stockage des etoiles en fonction du niveau de difficulte
     $diff_et = $diff_tab[$diff -1];
 
-    $form_data = [];
-    array_push($form_data,[
+    return $form_data=[
     	"nom" => $nom,
         "composant" => $composant,
         "adresse_auteur" => $mail,
@@ -35,9 +34,7 @@ function get_formData(){
 		"temps" => $temps,
 		"photo" => $photo,            
 		"date" => $date,
-    	"id_cocktail" => md5(rand())]);
-
-    return $form_data;
+    	"id_cocktail" => md5(rand())];
 }
 
 function get_cocktail(){
@@ -54,17 +51,15 @@ function get_cocktail(){
 	}
 }
 
-function add_CocktailToJSON($cocktails_array,$form_data){
+function add_CocktailToJSON($form_data){
     $json_file = "./bdd.json";
 
-    if ($cocktails_array == "") {
-        $cocktails_array = []; 
-    };
+    $list_cocktails = get_cocktail();
 
-    array_push($cocktails_array, $form_data );
+    array_push($list_cocktails, $form_data );
 
 
-    $json_contents = json_encode($cocktails_array);
+    $json_contents = json_encode($list_cocktails);
     file_put_contents($json_file, $json_contents);
 }
 
@@ -72,21 +67,28 @@ function add_CocktailToJSON($cocktails_array,$form_data){
 
 function search_cocktail($research,$cocktails_array){
 
-    foreach ($cocktails_array as $cocktail){
-        $cocktail= $cocktail[0]
+    //var_dump($cocktails_array);
+    foreach ($cocktails_array as $cocktail){   
+        //$cocktail= $cocktail[0];
         foreach ($cocktail as $cocktail_item){
-            preg_match('/'.$research.'/i', $cocktail_item, $matches);
-            print_r($matches);
+            if (stripos($cocktail_item, $research)){
+                echo "match\n";
+            }else{
+                echo "nomatch\n";
+            };
         };
     };
+
 }
 
-function del_cocktail($id){
-    $a=0;
-}
+
 
 $research = $_REQUEST["Recherche Recette"];
 
 search_cocktail($research,get_cocktail());
+
+function del_cocktail($id){
+    $a=0;
+}
 
 ?>
