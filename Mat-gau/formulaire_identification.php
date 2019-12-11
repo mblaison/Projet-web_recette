@@ -15,4 +15,4 @@
             <input type="submit" value="cliquer ici pour se connecter">
         </form>
         
-<?php include 'bas_page.html'?>
+<?php include 'bas_page.php'?>

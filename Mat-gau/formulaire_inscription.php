@@ -30,4 +30,4 @@
 </form>
 </div>
 
-<?php include 'bas_page.html'?>
+<?php include 'bas_page.php'?>
