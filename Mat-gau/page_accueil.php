@@ -54,7 +54,7 @@
           for ($i=count($donnees)-1;$i>=count($donnees)-9;$i--)
           {
           $recette = $donnees[$i];
-          $recette = $recette[0];
+          //$recette = $recette[0];
           echo '
           <div class="col-lg-4 col-md-6 mb-4">
           <div class="card h-100">
