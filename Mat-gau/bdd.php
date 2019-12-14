@@ -74,11 +74,15 @@ function search_cocktail($research,$cocktails_array){
             };
         };
     };
-    return $resultats;
+    //var_dump($resultats);
+    //var_dump(json_encode($resultats));
+    return json_encode($resultats);
 }
 
 function del_cocktail($id){
     $a=0;
 }
 
+
+//search_cocktail("Vodka",get_cocktail());
 ?>

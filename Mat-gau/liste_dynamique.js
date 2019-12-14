@@ -1,26 +1,16 @@
 window.addEventListener("DOMContentLoaded",function(){
 
 	var recherche = document.getElementById("form_recherche");
-	
-	function get_match(){	
-		var requete = new XMLHttpRequest();
-		requete.addEventListener("load",function(event){
-		});
-
-		var a_rechercher = new FormData(recherche);
-
-		var b=requete.open("POST","ws_dynamique.php");
-		requete.send(a_rechercher);
-		return b;
-	};
 
 	function show_list(resultats){
 		console.log(resultats);
 		var affichage_res = document.getElementById("js");
 		
-		//affichage_res.innerHTML ="";
+		affichage_res.innerHTML ="";
 
-		/*for (var cocktail in resultats){
+		for (i in resultats){
+			var cocktail = resultats[i];
+			console.log(cocktail);
 			affichage_res.innerHTML += 
 										"<div class=\"row\">"+
 										"<div class=\"col-lg-4 col-md-6 mb-4\">"+
@@ -28,7 +18,7 @@ window.addEventListener("DOMContentLoaded",function(){
   										"<a href=\"#\"><img class=\"card-img-top\" src="+ cocktail["photo"] + " alt=\"\"></a>"+
  										"<div class=\"card-body\">"+
     									"<h4 class=\"card-title\">"+
-      									"<a href=\"#\"> "+cocktail["titre"]+"</a>"+
+      									//"<a href=\"#\"> "+cocktail["titre"]+"</a>"+
     									"</h4>"+
     									"<h5>"+ cocktail["composant"] + "</h5>"+
     									"<p class=\"card-text\">" + cocktail["description"] + "</p>"+
@@ -38,19 +28,32 @@ window.addEventListener("DOMContentLoaded",function(){
   										"</div>"+
 										"</div>"+
 										"</div>";
-		};*/
+		};
 
-		for (var cocktail in resultats){
+		/*for (var cocktail in resultats){
 			affichage_res.innerHTML += "<h1>test</h1>";
 
-		};			
+		};		*/	
 	};
 
 	recherche.addEventListener('submit',function(event){
 		event.preventDefault();
-		//show_list(get_match());
-		var a =get_match();
-		console.log(a);
+
+		var requete = new XMLHttpRequest();
+		var contenu_recherche = document.getElementById("recherche_texte");
+		requete.addEventListener("load",function(event){
+			var resultats = JSON.parse(event.target.responseText);
+			//console.log(resultats);
+			show_list(resultats);
+		});
+		
+
+		requete.open('GET',"ws_dynamique.php?recherche="+contenu_recherche.value);
+		requete.send();
+
+
+		
+		//var a =get_match();
 		//show_list();
 	});
 });
