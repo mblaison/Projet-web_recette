@@ -1,19 +1,22 @@
 <?php include 'entete.html'; ?>
-
+	
+	<script type="text/javascript" src="liste_dynamique.js"></script>
 
 	<div class="core">
-	<form action="bdd.php" method="POST" enctype="multipart/form-data">
+	<!--<form action="bdd.php" method="POST" enctype="multipart/form-data">-->
+	<form id="form_recherche">
 	<p>
 		<label><h3>Recherche de recettes</h3></label><br/>
-		<input type="text" size="50" name="Recherche Recette" id="research_text">
+		
+		<input type="text" size="50" name="recherche" id="recherche_texte">
 			
-		<div>
+		<!--<div>
 			
-			<!--<input type="submit" value="Recherche Avancée" id="advanced">  -->
+			<input type="submit" value="Recherche Avancée" id="advanced">  
 
 			<h4>Recherche Avancée : </h4><br/>
 	
-			<!-- Liste de checkbox permettant de filtrer les résultats par alcool de base utilisé -->
+			 Liste de checkbox permettant de filtrer les résultats par alcool de base utilisé 
 			<label><h5>Alcool de base :</h5></label><br/>
 			<div id = "base">
 				<input type="checkbox"  id="rhum">
@@ -34,20 +37,17 @@
 			<label><h5>Coût :</h5></label><br/>
 			<div>
 				<input type="range" name="a" id="difficulty" value="2" max="3" min="1" step="1">
-			</div>
+			</div> 
 			
 
 		</p>
-		</div>
+		</div> -->
 		<input type="submit" value="Rechercher" id="submit_research">
-		</p>
+		
 	</form>
 
-	<div>
-		<h2>
-			Résultat de la Recherche:
-		</h2>
-	</div>
+	<div id="js"></div>
+	
 	</div>
 
 

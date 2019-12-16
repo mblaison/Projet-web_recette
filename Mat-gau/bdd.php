@@ -63,32 +63,26 @@ function add_CocktailToJSON($form_data){
     file_put_contents($json_file, $json_contents);
 }
 
-//add_CocktailToJSON(get_cocktail(),get_formData());
 
 function search_cocktail($research,$cocktails_array){
 
-    //var_dump($cocktails_array);
+    $resultats = [];
     foreach ($cocktails_array as $cocktail){   
-        //$cocktail= $cocktail[0];
         foreach ($cocktail as $cocktail_item){
             if (stripos($cocktail_item, $research)){
-                echo "match\n";
-            }else{
-                echo "nomatch\n";
+                array_push($resultats, $cocktail);
             };
         };
     };
-
+    //var_dump($resultats);
+    //var_dump(json_encode($resultats));
+    return json_encode($resultats);
 }
-
-
-
-$research = $_REQUEST["Recherche Recette"];
-
-search_cocktail($research,get_cocktail());
 
 function del_cocktail($id){
     $a=0;
 }
 
+
+//search_cocktail("Vodka",get_cocktail());
 ?>
