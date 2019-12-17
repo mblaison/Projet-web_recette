@@ -69,8 +69,9 @@ function search_cocktail($research,$cocktails_array){
     $resultats = [];
     foreach ($cocktails_array as $cocktail){   
         foreach ($cocktail as $cocktail_item){
-            if (stripos($cocktail_item, $research)){
-                array_push($resultats, $cocktail);
+            if (stripos($cocktail_item, $research)!== false){
+                    array_push($resultats, $cocktail);
+                    break;    
             };
         };
     };

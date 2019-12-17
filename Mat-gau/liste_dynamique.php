@@ -1,7 +1,7 @@
 <?php include 'entete.html'; ?>
 	
 	<script type="text/javascript" src="liste_dynamique.js"></script>
-	<script type="text/javascript" src="suppression.js"></script>
+	<!--<script type="text/javascript" src="suppression.js"></script>-->
 
 	<div class="core">
 	<!--<form action="bdd.php" method="POST" enctype="multipart/form-data">-->
@@ -14,7 +14,8 @@
 		<input type="submit" value="Rechercher" id="submit_research">	
 	</form>
 
-	<div class="row">"
+	<div class="row">
+		
 		<div id="js"></div>
 	
 	</div>
