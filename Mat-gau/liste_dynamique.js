@@ -35,20 +35,43 @@ window.addEventListener("DOMContentLoaded",function(){
 		};
 	};
 
+	function suppression(){
+		
+		var suppr = new XMLHttpRequest();
+		
+		if (confirm("Voulez vous vraiment supprimer ce cocktail?")){
+
+			var id = bouton.getAttribute("id_cocktail");
+			console.log(id);
+			
+			suppr.open('POST',"ws_suppression.php");
+			suppr.send("id");
+		}
+	};
+
+	var requete = new XMLHttpRequest();
 	recherche.addEventListener('submit',function(event){
 		event.preventDefault();
 
-		var requete = new XMLHttpRequest();
+		
 		var contenu_recherche = document.getElementById("recherche_texte");
 		requete.addEventListener("load",function(event){
 			var resultats = JSON.parse(event.target.responseText);
 			//console.log(resultats);
 			show_list(resultats);
+			
+			
+
 		});
-		
+
 
 		requete.open('GET',"ws_dynamique.php?recherche="+contenu_recherche.value);
 		requete.send();
+	});
 
+	a.addEventListener("load",function(event){
+		var bouton = document.getElementById("suppr");
+		console.log("aa");
+		bouton.addEventListener("click",suppression());
 	});
 });

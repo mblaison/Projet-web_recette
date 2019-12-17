@@ -1,10 +1,9 @@
 <?php
-include"./bdd.php";
+	include"./bdd.php";
 
-$id = $_REQUEST["id"];
+	$id = $_REQUEST["id"];
 
-del_cocktail($id);
-http_response_code(201);
-
+	del_cocktail($id);
+	http_response_code(201);
 
 ?>
