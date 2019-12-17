@@ -79,10 +79,15 @@ function search_cocktail($research,$cocktails_array){
     return json_encode($resultats);
 }
 
-function del_cocktail($id){
-    $a=0;
+function del_cocktail($id, $array){
+    foreach ($array as $cocktail) {
+        if ($cocktail["id_cocktail"] == $id) {
+            unset($array[$cocktail]);
+        };
+    };
+    
+    $json_contents = json_encode($array);
+    file_put_contents("bdd.json", $json_contents);
 }
 
-
-//search_cocktail("Vodka",get_cocktail());
 ?>

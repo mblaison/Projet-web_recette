@@ -6,13 +6,15 @@ window.addEventListener("DOMContentLoaded",function(){
 		console.log(resultats);
 		var affichage_res = document.getElementById("js");
 		
+		
+
 		affichage_res.innerHTML ="";
 
 		for (i in resultats){
 			var cocktail = resultats[i];
 			console.log(cocktail);
 			affichage_res.innerHTML += 
-										"<div class=\"row\">"+
+										
 										"<div class=\"col-lg-4 col-md-6 mb-4\">"+
 										"<div class=\"card h-100\">"+
   										"<a href=\"#\"><img class=\"card-img-top\" src="+ cocktail["photo"] + " alt=\"\"></a>"+
@@ -27,13 +29,10 @@ window.addEventListener("DOMContentLoaded",function(){
     									"<small class=\"text-muted\">"+ cocktail["difficulte"]+ "</small>"+
   										"</div>"+
 										"</div>"+
+										//"<div> <input type=\"button\" value=\"Supprimer\" id=\"suppr\" data-cocktail_id="+cocktail["id_cocktail"]+"> </div> "+
+										"<input type=\"button\" value=\"Supprimer\" id=\"suppr\" data-cocktail_id="+cocktail["id_cocktail"]+"> "+
 										"</div>";
 		};
-
-		/*for (var cocktail in resultats){
-			affichage_res.innerHTML += "<h1>test</h1>";
-
-		};		*/	
 	};
 
 	recherche.addEventListener('submit',function(event){
@@ -51,9 +50,5 @@ window.addEventListener("DOMContentLoaded",function(){
 		requete.open('GET',"ws_dynamique.php?recherche="+contenu_recherche.value);
 		requete.send();
 
-
-		
-		//var a =get_match();
-		//show_list();
 	});
 });

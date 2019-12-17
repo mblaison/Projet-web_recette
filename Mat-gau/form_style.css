@@ -11,7 +11,7 @@ form{
 
 }
 
-input[type=submit] {
+input[type=submit],input[type=button] {
   background-color: #cc3c14;
   border: 1px hidden;
   border-radius: 100px;
