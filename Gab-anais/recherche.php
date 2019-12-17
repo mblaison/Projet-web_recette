@@ -72,7 +72,7 @@
     </div>
 
     <!-- Affichage de la recette-->
-    <div class = "single-page-recipe spad"> </div>
+    <div id = "res_recherche"> </div>
 
 
 
