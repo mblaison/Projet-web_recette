@@ -78,10 +78,12 @@
 
             <p>Mot de passe : </p>
             <input type="password" name="mdp" required>
+            <br>
 
-            <input type="submit" value="Connexion">
+            <button type="submit"> Connexion </button>
 
         </form>
+    </div>
 
 
     
