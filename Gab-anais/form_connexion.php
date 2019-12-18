@@ -1,15 +1,17 @@
 <?php
-session_start();
+## Fichier avec les fonctions
+include ('bdd_recipe.php');
 
-## fichier avec les logins
-include ("login.json");
 
 ## Données du login
 $login = $_REQUEST["login"];
 $mdp = $_REQUEST["mdp"];
 
+
 ## Récupération des logins
-$comptes = json_decode(file_get_contents("./login.json"), true);
+$comptes = get_ids();
+console.log($comptes);
+
 
 ## Vérification de la connexion
 $find = false;

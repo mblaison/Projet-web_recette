@@ -75,6 +75,7 @@
                 <label for="dessert">Dessert</label>
             </p>
 
+            <p> Type de cuisine : </p>
             <select name = "type_cuisine" id="type_cuisine">
                 <option value=""></option>
                 <option value="française">Française</option>
