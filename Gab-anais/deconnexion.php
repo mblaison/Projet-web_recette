@@ -42,6 +42,7 @@
                             <li><a href="recherche.php">Recherche</a></li>
                             <li><a href="addRecipe.php">Ajouter une recette</a></li>
                             <?php
+                            session_start();
                             $co = $_SESSION["connexion"];
 
                             if ($co) {
@@ -65,24 +66,22 @@
     <!-- Bandeau haut de page-->
     <div class="hero-search set-bg" data-setbg="img/search-bg.jpg"> </div>
     
-  
+
+
+    <?php
+    session_start();
+    $_SESSION["connexion"] = false;
+
+    header("Location: ./state.php");
+
+    ?>
 
 
 
 
-<?php
-$_SESSION["connexion"] = false;
-
-header("Location: ./state.php")
-
-?>
-
-
-
-
-<!-- Pied de page -->
+    <!-- Pied de page -->
     
-<footer class="footer-section">
+    <footer class="footer-section">
             <div class="container">
                 <p>© Gabrielle Pozo & Anaïs Louis</p>
                 <p>Mise à jour le 10/12/19</p>

@@ -42,6 +42,7 @@
                             <li><a href="recherche.php">Recherche</a></li>
                             <li><a href="addRecipe.php">Ajouter une recette</a></li>
                             <?php
+                            session_start();
                             $co = $_SESSION["connexion"];
 
                             if ($co) {

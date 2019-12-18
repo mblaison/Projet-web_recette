@@ -65,23 +65,19 @@
     <!-- Bandeau haut de page-->
     <div class="hero-search set-bg" data-setbg="img/search-bg.jpg"> </div>
     
-    
 
 
+    <?php
+    session_start();
+    $co = $_SESSION["connexion"];
 
-
-
-<?php
-$co = $_SESSION["connexion"];
-
-if ($co) {
-    echo "Vous êtes connecté <br> <a href=\"deconnexion.php\">Se déconnecter</a>";
-}
-else {
-    echo "Vous n\'êtes plus connecté <br> <a href=\"accueil.php\">Retour à l\'accueil</a>";
-}
-
-?>
+    if ($co) {
+        echo "Vous êtes connecté <br> <a href=\"deconnexion.php\">Se déconnecter</a>";
+    }
+    else {
+        echo "Vous n\'êtes plus connecté <br> <a href=\"accueil.php\">Retour à l\'accueil</a>";
+    }
+    ?>
 
 
 
@@ -89,7 +85,7 @@ else {
 
 <!-- Pied de page -->
     
-<footer class="footer-section">
+    <footer class="footer-section">
             <div class="container">
                 <p>© Gabrielle Pozo & Anaïs Louis</p>
                 <p>Mise à jour le 10/12/19</p>
