@@ -33,12 +33,13 @@ window.addEventListener("DOMContentLoaded",function(){
 											"</div>";
 			};
 	    }
-  		suppression();
+	    var elements = document.querySelectorAll("input[type=button]");
+  		for (var i = 0, len = elements.length; i <= len; i++){
+  			suppression(elements[i]);
+  		}
 	};
 
-	function suppression(){ //ajouter var resultats en parametres?
-		
-		var bouton = document.getElementById("suppr");
+	function suppression(bouton){ //ajouter var resultats en parametres?
 
 		bouton.addEventListener("click",function(){
 			console.log("aa");
