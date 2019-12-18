@@ -3,33 +3,30 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Yoga Studio Template">
-    <meta name="keywords" content="Yoga, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Savory</title>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet">
+    <title>Savory</title>
 
     <!-- Css -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="css/nice-select.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
 
 
-
+    <!-- Gestion ajout de recette-->
     <script src="./form_recette.js"></script>
 
 </head>
+
 
 <body>
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
     </div>
+
 
     <!-- Entête -->
     <header class="header-section-other">
@@ -43,8 +40,8 @@
                             <li><a href="accueil.html">Accueil</a></li>
                             <li><a href="recettes.php">Recettes</a></li>
                             <li><a href="recherche.php">Recherche</a></li>
-                            <li><a href="addRecipe.php">Ajout</a></li>
-                            <li><a href="connexion.php">S'identifier</a></li>
+                            <li><a href="addRecipe.php">Ajouter une recette</a></li>
+                            <li><a href="connexion.php">Identification</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -56,7 +53,10 @@
     </header>
 
 
+    <!-- Bandeau haut de page-->
     <div class="hero-search set-bg" data-setbg="img/search-bg.jpg"> </div>
+    
+    
     <!-- Forulaire d'ajout -->
     <div class="formulaire">
         <form id="ajout_recette" action="./form_recette.php" method="post">
