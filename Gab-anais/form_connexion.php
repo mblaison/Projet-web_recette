@@ -19,6 +19,4 @@ foreach ($comptes as $p) {
 ## Changement d'état de la session
 $_SESSION["connexion"] = $find;
 
-header("Location : state.php");
-
 ?>
