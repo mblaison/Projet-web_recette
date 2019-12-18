@@ -3,7 +3,7 @@
 session_start();
 
 $ok = $_SESSION["connexion"];
-echo $_ok;
+echo $ok;
 
 if ($ok) {
     echo '<div style="text-align: center">';
