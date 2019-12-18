@@ -63,7 +63,7 @@
         <?php
             include ('bdd_recipe.php');
 
-            $donnees = get_recipe();
+            $donnees = get_recipe("");
 
             foreach ($donnees as $recettes)
             {
