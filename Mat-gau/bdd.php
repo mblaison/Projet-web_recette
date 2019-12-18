@@ -80,7 +80,10 @@ function search_cocktail($research,$cocktails_array){
     return json_encode($resultats);
 }
 
-function del_cocktail($id, $array){
+function del_cocktail($id){
+
+    $array =get_cocktail();
+    
     foreach ($array as $cocktail) {
         if ($cocktail["id_cocktail"] == $id) {
             unset($array[$cocktail]);
