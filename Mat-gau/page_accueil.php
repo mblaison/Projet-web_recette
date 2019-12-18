@@ -50,7 +50,7 @@
     <div class="row"> 
         <?php
         $donnees = get_recipe();
-
+          //borne min 
           for ($i=count($donnees)-1;$i>=count($donnees)-9;$i--)
           {
           $recette = $donnees[$i];
