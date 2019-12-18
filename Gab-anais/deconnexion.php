@@ -42,7 +42,6 @@
                             <li><a href="recherche.php">Recherche</a></li>
                             <li><a href="addRecipe.php">Ajouter une recette</a></li>
                             <?php
-                            session_start();
                             $co = $_SESSION["connexion"];
 
                             if ($co) {
@@ -72,13 +71,9 @@
 
 
 <?php
-
-session_start();
-
 $_SESSION["connexion"] = false;
 
 header("Location: ./state.php")
-
 
 ?>
 

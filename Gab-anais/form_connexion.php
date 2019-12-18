@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 ## Données du login
 $login = $_REQUEST["login"];
 $mdp = $_REQUEST["mdp"];

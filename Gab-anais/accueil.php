@@ -40,7 +40,6 @@
                         
 
                         <?php
-                        session_start();
                         $co = $_SESSION["connexion"];
 
                         if ($co) {
