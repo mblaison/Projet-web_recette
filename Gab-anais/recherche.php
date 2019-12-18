@@ -8,12 +8,11 @@
 
     <title>Savory</title>
 
-    <!-- Css Styles -->
+    <!-- Css -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/nice-select.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
-
 
     <!-- JS gérant la recherche -->
     <script src="./form_recherche.js"></script>
@@ -30,9 +29,12 @@
     <!-- Entête -->
     <header class="header-section-other">
         <div class="container-fluid">
+            <!-- Logo -->
             <div class="logo">
                 <a href="./accueil.php"><img src="img/savory.png" alt=""></a>
             </div>
+
+            <!-- Menu -->
             <div class="nav-menu">
                     <nav class="main-menu mobile-menu">
                         <ul>
@@ -40,26 +42,22 @@
                             <li><a href="recettes.php">Recettes</a></li>
                             <li><a href="recherche.php">Recherche</a></li>
                             <li><a href="addRecipe.php">Ajouter une recette</a></li>
+
                             <?php
                             session_start();
                             $co = $_SESSION["connexion"];
-
-                            if ($co) {
-                                echo "<li><a href=\"deconnexion.php\">Déconnexion</a></li>";
-                            }
-                            else {
-                                echo "<li><a href=\"connexion.php\">Identification</a></li>";
-                            }
+                            if ($co) {echo "<li><a href=\"deconnexion.php\">Déconnexion</a></li>";}
+                            else {echo "<li><a href=\"connexion.php\">Identification</a></li>";}
                             ?>
+
                         </ul>
                     </nav>
             </div>
+
             <div id="mobile-menu-wrap"></div>
+
         </div>
     </header>
-
-    
-
 
 
 
@@ -79,20 +77,17 @@
     </div>
 
 
+
     <!-- Affichage de la recette-->
     <div id = "res_recherche"> </div>
 
-
-
-
     
     
-    <!-- Pied de page -->
-    
+    <!-- Pied de page -->    
     <footer class="footer-section">
         <div class="container">
             <p>© Gabrielle Pozo & Anaïs Louis</p>
-            <p>Mise à jour le 10/12/19</p>
+            <p>Mise à jour le 18/12/19</p>
         </div>
     </footer>
 
@@ -105,6 +100,6 @@
     <script src="js/jquery.nice-select.min.js"></script>
     <script src="js/mixitup.min.js"></script>
     <script src="js/main.js"></script>
-</body>
 
+</body>
 </html>
