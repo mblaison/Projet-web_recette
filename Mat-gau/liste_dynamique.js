@@ -1,6 +1,5 @@
 window.addEventListener("DOMContentLoaded",function(){
 
-	var recherche = document.getElementById("form_recherche");
 
 	function show_list(resultats){
 		console.log(resultats);
@@ -57,38 +56,52 @@ window.addEventListener("DOMContentLoaded",function(){
 			}
 
 			suppr.addEventListener("load",function(event){
-				var json = new XMLHttpRequest();
+				/*var json = new XMLHttpRequest();
 				json.open("GET","./bdd.json", false);
 				json.send(null);
 				var refresh = JSON.parse(json.responseText);
-				//var refresh = JSON.parse("bdd.json");
-				show_list(refresh);
+				//var refresh = JSON.parse("bdd.json");*/
+				//show_list(refresh);
+				//ws_recherche();
+				get_resultats();
 			});
 		});
 	};
 
-
-	var requete = new XMLHttpRequest();
-	recherche.addEventListener('submit',function(event){
-		event.preventDefault();
-
+	/*function ws_recherche(){
 		var contenu_recherche = document.getElementById("recherche_texte");
-		
+
+		requete.open('GET',"ws_dynamique.php?recherche="+contenu_recherche.value);
+		requete.send();
+	};*/
+
+	function get_resultats(){
+		var contenu_recherche = document.getElementById("recherche_texte");
+
+		requete.open('GET',"ws_dynamique.php?recherche="+contenu_recherche.value);
+		requete.send();
+
 		requete.addEventListener("load",function(event){ // faire une fonction avec cette partie?
 			
 			if(requete.status == 400){
 				alert("Veuillez saisir une recherche");
 			}else{
+				console.log(event.target.responseText);
 				var resultats = JSON.parse(event.target.responseText);
 				console.log(resultats);
 			
 				show_list(resultats);	
 			}
-			console.log("test");
-			//suppression();
 		});
+	};
 
-		requete.open('GET',"ws_dynamique.php?recherche="+contenu_recherche.value);
-		requete.send();
+
+	var recherche = document.getElementById("form_recherche");
+
+	var requete = new XMLHttpRequest();
+	recherche.addEventListener('submit',function(event){
+		event.preventDefault();
+		//ws_recherche();
+		get_resultats();
 	});
 });

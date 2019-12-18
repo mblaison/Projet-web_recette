@@ -84,9 +84,12 @@ function del_cocktail($id){
 
     $array =get_cocktail();
     
-    foreach ($array as $cocktail) {
+    for ($i=0; $i<=count($array); $i++) {
+
+        $cocktail =$array[$i];
+
         if ($cocktail["id_cocktail"] == $id) {
-            unset($array[$cocktail]);
+            unset($array[$i]);
         };
     };
     
