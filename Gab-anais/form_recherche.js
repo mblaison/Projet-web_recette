@@ -6,9 +6,7 @@ window.addEventListener("DOMContentLoaded", function() {
     event.preventDefault(); //inhibe l'action par default
     var data = new FormData(formulaire); //récupère champ formulaire
     var requete = new XMLHttpRequest();
-		// on envoie la requête à l'URL du webservice
-		requete.open("POST", "form_recherche.php");
-    requete.send(data);
+
 
     requete.onreadystatechange = function() {
       if(requete.readyState == 4 && requete.status == 200){
@@ -72,6 +70,9 @@ window.addEventListener("DOMContentLoaded", function() {
       }
     // FIN ONREADYSTATECHANGE
     };
+    // on envoie la requête à l'URL du webservice
+		requete.open("POST", "form_recherche.php");
+    requete.send(data);
   // FIN SUBMIT
   });
 
