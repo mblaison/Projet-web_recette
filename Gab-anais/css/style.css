@@ -1248,6 +1248,8 @@ Propriétés autres images
 /* ------- Formulaire ajout de recette -------*/
 .formulaire_ajout {
 	margin: auto;
+	margin-top: 15px;
+	margin-bottom: 15px;
 	position : relative;
 	width : 550px;
 	line-height: 24px;
