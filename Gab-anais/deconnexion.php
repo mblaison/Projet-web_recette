@@ -14,9 +14,9 @@
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
 
-    <!-- Gestion connexion -->
-    <script src="./form_connexion.js"></script>
 
+    <!-- Gestion ajout de recette-->
+    <script src="./form_recette.js"></script>
 
 </head>
 
@@ -65,28 +65,29 @@
 
     <!-- Bandeau haut de page-->
     <div class="hero-search set-bg" data-setbg="img/search-bg.jpg"> </div>
-
-
-    <!-- Formulaire de connexion -->
-    <div class="formulaire_connexion">
-        <form id="identification" action="./form_connexion.php" method="post">
-
-            <p>Login : </p>
-            <input type="text" name="login" placeholder="toto" required>
-
-            <p>Mot de passe : </p>
-            <input type="password" name="mdp" required>
-
-            <input type="submit" value="Connexion">
-
-        </form>
-
-
-
-
     
-    <!-- Pied de page -->
-    <footer class="footer-section">
+  
+
+
+
+
+<?php
+
+session_start();
+
+$_SESSION["connexion"] = false;
+
+header("Location: ./state.php")
+
+
+?>
+
+
+
+
+<!-- Pied de page -->
+    
+<footer class="footer-section">
             <div class="container">
                 <p>© Gabrielle Pozo & Anaïs Louis</p>
                 <p>Mise à jour le 10/12/19</p>

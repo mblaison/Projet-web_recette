@@ -31,16 +31,26 @@
     <header class="header-section-other">
         <div class="container-fluid">
             <div class="logo">
-                <a href="./accueil.html"><img src="img/savory.png" alt=""></a>
+                <a href="./accueil.php"><img src="img/savory.png" alt=""></a>
             </div>
             <div class="nav-menu">
                     <nav class="main-menu mobile-menu">
                         <ul>
-                            <li><a href="accueil.html">Accueil</a></li>
+                            <li><a href="accueil.php">Accueil</a></li>
                             <li><a href="recettes.php">Recettes</a></li>
                             <li><a href="recherche.php">Recherche</a></li>
                             <li><a href="addRecipe.php">Ajouter une recette</a></li>
-                            <li><a href="connexion.php">Identification</a></li>
+                            <?php
+                            session_start();
+                            $co = $_SESSION["connexion"];
+
+                            if ($co) {
+                                echo "<li><a href=\"deconnexion.php\">Déconnexion</a></li>";
+                            }
+                            else {
+                                echo "<li><a href=\"connexion.php\">Identification</a></li>";
+                            }
+                            ?>
                         </ul>
                     </nav>
             </div>

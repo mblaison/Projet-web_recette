@@ -38,7 +38,17 @@
                             <li><a href="recettes.php">Recettes</a></li>
                             <li><a href="recherche.php">Recherche</a></li>
                             <li><a href="addRecipe.php">Ajouter une recette</a></li>
-                            <li><a href="connexion.php">Identification</a></li>
+                            <?php
+                            session_start();
+                            $co = $_SESSION["connexion"];
+
+                            if ($co) {
+                                echo "<li><a href=\"deconnexion.php\">Déconnexion</a></li>";
+                            }
+                            else {
+                                echo "<li><a href=\"connexion.php\">Identification</a></li>";
+                            }
+                            ?>
                         </ul>
                     </nav>
                 </div>
