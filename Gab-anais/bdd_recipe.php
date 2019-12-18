@@ -66,7 +66,7 @@ function add_recipe($r)
 }
 
 
-function get_ids($login,$mdp)
+function get_ids($comptes)
 {
     #fichier json contenant les recettes
     $file = "./login.json";
@@ -76,20 +76,21 @@ function get_ids($login,$mdp)
         $contenu = file_get_contents($file);
         $data = json_decode($contenu, true);
 
-        $result_connexion = false;
+        #$result_connexion = false;
 
         foreach ($data as $ids) {
-                $pos_login = strpos($ids.login, $login);
-                $pos_mdp = strpos($ids.mdp, $mdp);
+                $pos_login = strpos($ids[1], $comptes[1]);
+                $pos_mdp = strpos($ids[2], $comptes[2]);
 
                 ## si il trouve une correspondance, ajouter la recette dans le nouvel array
                 if ($pos_login !== false && $pos_mdp !== false) {
-                    $result_connexion = true;
+                    return $ids;
+                    break;
                 }
+                else {return $data;}
             }
         }
 
-        return $result_connexion;
 }
 
 ?>

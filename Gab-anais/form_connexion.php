@@ -1,22 +1,17 @@
 <?php
-## Fichier avec les fonctions
-include ('bdd_recipe.php');
-
+session_start();
 
 ## Données du login
 $login = $_REQUEST["login"];
 $mdp = $_REQUEST["mdp"];
 
-
 ## Récupération des logins
-$comptes = get_ids();
-console.log($comptes);
-
+$comptes = json_decode(file_get_contents("./login.json"), true);
 
 ## Vérification de la connexion
 $find = false;
 foreach ($comptes as $p) {
-    if ($p["login"] == $login && $p["mdp"] == md5($mdp)) {
+    if ($p["login"] == $login && $p["mdp"] == $mdp) {
         $find = true;
     }
 }
