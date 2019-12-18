@@ -1245,6 +1245,15 @@ Propriétés autres images
 
 
 
+/* ------- Formulaire ajout de recette -------*/
+.formulaire_ajout {
+	margin: auto;
+	position : relative;
+	width : 550px;
+	line-height: 24px;
+	text-decoration: none;
+}
+
 
 /* ----------------------- Responsive Media Styles ------------------------*/
 

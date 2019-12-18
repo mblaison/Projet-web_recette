@@ -58,7 +58,7 @@
 
 
     <!-- Formulaire de connexion -->
-    <div class="formulaire">
+    <div class="formulaire_connexion">
         <form id="identification" action="./form_connexion.php" method="post">
 
             <p>Login : </p>

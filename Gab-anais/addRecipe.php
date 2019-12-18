@@ -58,7 +58,7 @@
     
     
     <!-- Forulaire d'ajout -->
-    <div class="formulaire">
+    <div class="formulaire_ajout">
         <form id="ajout_recette" action="./form_recette.php" method="POST">
             
             <p>Titre de la recette : </p>
