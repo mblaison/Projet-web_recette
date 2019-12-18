@@ -8,17 +8,18 @@
 
     <title>Savory</title>
 
-
     <!-- Css -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/nice-select.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
 
+    <!-- Gestion connexion -->
     <script src="./form_connexion.js"></script>
 
 
 </head>
+
 
 <body>
     <!-- Page Preloder -->

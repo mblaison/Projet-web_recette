@@ -59,7 +59,7 @@
     
     <!-- Forulaire d'ajout -->
     <div class="formulaire">
-        <form id="ajout_recette" action="./form_recette.php" method="post">
+        <form id="ajout_recette" action="./form_recette.php" method="POST">
             
             <p>Titre de la recette : </p>
             <input type="text" name="titre" placeholder="Tarte aux pommes">
