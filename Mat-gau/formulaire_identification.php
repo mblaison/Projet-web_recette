@@ -1,7 +1,8 @@
 <?php include 'entete.html';?>
 
 <p></p>
-        <form method="post" action="connexion.php">
+        <script type="texte/javascript" src="connexion.js"></script>
+        <form id="id_form" method="post">
             <p>
                 <label for="email">Adresse email : </label>
                 <br>
