@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-    var formulaire = document.getElementById("connexion");
+    var formulaire = document.getElementById("identification");
     formulaire.addEventListener("submit", function(event) {
         event.preventDefault();
         var data = new FormData(formulaire);
