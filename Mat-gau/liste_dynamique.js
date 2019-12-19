@@ -39,8 +39,7 @@ window.addEventListener("DOMContentLoaded",function(){
   		}
 	};
 
-	function suppression(bouton){ //ajouter var resultats en parametres?
-
+	function suppression(bouton){ 
 		bouton.addEventListener("click",function(){
 			console.log("aa");
 			var suppr = new XMLHttpRequest();
@@ -57,24 +56,18 @@ window.addEventListener("DOMContentLoaded",function(){
 			}
 
 			suppr.addEventListener("load",function(event){
-				/*var json = new XMLHttpRequest();
-				json.open("GET","./bdd.json", false);
-				json.send(null);
-				var refresh = JSON.parse(json.responseText);
-				//var refresh = JSON.parse("bdd.json");*/
-				//show_list(refresh);
-				//ws_recherche();
-				get_resultats();
+				//console.log(suppr.responseText);
+				if (suppr.status == 200){
+					alert("Cocktail supprimé avec succès");
+					get_resultats();
+				}else{
+					alert("Vous devez être connecté pour supprimmer un cocktail");
+				}
+				
 			});
 		});
 	};
 
-	/*function ws_recherche(){
-		var contenu_recherche = document.getElementById("recherche_texte");
-
-		requete.open('GET',"ws_dynamique.php?recherche="+contenu_recherche.value);
-		requete.send();
-	};*/
 
 	function get_resultats(){
 		var contenu_recherche = document.getElementById("recherche_texte");
@@ -82,7 +75,7 @@ window.addEventListener("DOMContentLoaded",function(){
 		requete.open('GET',"ws_dynamique.php?recherche="+contenu_recherche.value);
 		requete.send();
 
-		requete.addEventListener("load",function(event){ // faire une fonction avec cette partie?
+		requete.addEventListener("load",function(event){ 
 			
 			if(requete.status == 400){
 				alert("Veuillez saisir une recherche");
@@ -102,7 +95,6 @@ window.addEventListener("DOMContentLoaded",function(){
 	var requete = new XMLHttpRequest();
 	recherche.addEventListener('submit',function(event){
 		event.preventDefault();
-		//ws_recherche();
 		get_resultats();
 	});
 });
