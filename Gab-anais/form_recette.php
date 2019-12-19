@@ -1,7 +1,7 @@
 <?php
+
 ## Fichier avec les fonctions
 include ('bdd_recipe.php');
-
 
 ## Données de la recette 
 $titre = $_REQUEST["titre"];

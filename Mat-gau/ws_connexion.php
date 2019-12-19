@@ -11,8 +11,9 @@ $trouve = false;
 foreach ($comptes as $c) {
     if ($c["email"] == $adresse && $c["pwd"] == md5($mdp)) {
         $trouve = true;
-        echo $c["email"];
-        http_response_code(201);   
+        //echo $comptes;
+        http_response_code(201);
+        break;   
     }
     else {
         http_response_code(400);

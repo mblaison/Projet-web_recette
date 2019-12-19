@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Anaïs Louis & Gabrielle Pozo">
+    <link rel="icon" href="img/icon.png">
     
     <title>Savory</title>
 
@@ -13,7 +15,6 @@
     <link rel="stylesheet" href="css/nice-select.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
-
 
 </head>
 
@@ -28,27 +29,27 @@
     <!-- Entête -->
     <header class="header-section-other">
         <div class="container-fluid">
+            <!-- Logo -->
             <div class="logo">
-                <a href="./accueil.html"><img src="img/savory.png" alt=""></a>
+                <a href="./accueil.php"><img src="img/savory.png" alt=""></a>
             </div>
+
+            <!-- Menu -->
             <div class="nav-menu">
                     <nav class="main-menu mobile-menu">
                         <ul>
-                            <li><a href="accueil.html">Accueil</a></li>
+                            <li><a href="accueil.php">Accueil</a></li>
                             <li><a href="recettes.php">Recettes</a></li>
                             <li><a href="recherche.php">Recherche</a></li>
                             <li><a href="addRecipe.php">Ajouter une recette</a></li>
+
                             <?php
                             session_start();
                             $co = $_SESSION["connexion"];
-
-                            if ($co) {
-                                echo "<li><a href=\"deconnexion.php\">Déconnexion</a></li>";
-                            }
-                            else {
-                                echo "<li><a href=\"connexion.php\">Identification</a></li>";
-                            }
+                            if ($co) {echo "<li><a href=\"deconnexion.php\">Déconnexion</a></li>";}
+                            else {echo "<li><a href=\"connexion.php\">Identification</a></li>";}
                             ?>
+
                         </ul>
                     </nav>
                 </div>
@@ -84,16 +85,12 @@
     
 
     <!-- Pied de page -->
-    
     <footer class="footer-section">
             <div class="container">
                 <p>© Gabrielle Pozo & Anaïs Louis</p>
-                <p>Mise à jour le 10/12/19</p>
+                <p>Mise à jour le 18/12/19</p>
             </div>
     </footer>
-
-
-
 
 
     <!-- Js Plugins -->
@@ -103,6 +100,6 @@
     <script src="js/jquery.nice-select.min.js"></script>
     <script src="js/mixitup.min.js"></script>
     <script src="js/main.js"></script>
-</body>
 
+</body>
 </html>
