@@ -1,11 +1,11 @@
 <?php
 session_start();
 
-## Données du login
+## Données entrées dans le formulaire de connexion
 $login = $_REQUEST["login"];
 $mdp = $_REQUEST["mdp"];
 
-## Récupération des logins
+## Récupération des logins dans la bdd
 $comptes = json_decode(file_get_contents("./login.json"), true);
 
 ## Vérification de la connexion
@@ -18,5 +18,4 @@ foreach ($comptes as $p) {
 
 ## Changement d'état de la session
 $_SESSION["connexion"] = $find;
-
 ?>

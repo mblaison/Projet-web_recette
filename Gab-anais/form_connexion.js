@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         requete.onreadystatechange  = function() {
             if(requete.readyState == 4 && requete.status == 200){
+                // Redirection vers la page d'accueil après la connexion
                 window.location.href = "./accueil.php";
             }
         }
@@ -15,4 +16,5 @@ document.addEventListener("DOMContentLoaded", function() {
         requete.open("POST", "form_connexion.php");
         requete.send(data);
     });
+
 });
