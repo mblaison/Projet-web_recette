@@ -689,8 +689,8 @@ ol {
 
 .hero-search .filter-table .filter-search button {
 	padding: 12px 55px;
-	border: 1px solid #FC0254;
-	background: #FC0254;
+	border: 1px solid rgba(243, 109, 109);
+	background: rgba(243, 109, 109);
 	font-size: 18px;
 	font-weight: 700;
 	color: #fff;
@@ -1175,41 +1175,9 @@ ol {
 	position: absolute;
 	left: 0;
 	top: 0;
-	color: #FC0254;
+	color: rgba(243, 109, 109, 0.795);
 	font-size: 18px;
 	font-weight: 700;
-}
-
-.recipe-right .notes h3 {
-	color: #353535;
-	font-weight: 700;
-	margin-bottom: 35px;
-}
-
-.recipe-right .notes .notes-item {
-	background: #F5F6FA;
-	padding-left: 34px;
-	padding-top: 30px;
-	padding-right: 25px;
-	padding-bottom: 15px;
-	margin-bottom: 30px;
-}
-
-.recipe-right .notes .notes-item span {
-	color: #fff;
-	display: inline-block;
-	border-radius: 50%;
-	font-size: 15px;
-	font-weight: 700;
-	height: 27px;
-	width: 27px;
-	text-align: center;
-	line-height: 27px;
-	background: rgba(0, 105, 100, 0.445);;
-}
-
-.recipe-right .notes .notes-item p {
-	margin-top: 10px;
 }
 
 
@@ -1219,7 +1187,7 @@ ol {
 
 .one_recipe {
 	display: block;
-	background: rgba(0, 105, 100, 0.445);
+	background: rgba(243, 109, 109, 0.795);
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 15px;

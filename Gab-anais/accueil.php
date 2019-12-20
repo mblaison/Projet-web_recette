@@ -73,7 +73,7 @@
                         </div>
                         <div class="pt-recipe-text">
                             <span>10 décembre 2019</span>
-                            <h3>Gauffres en 3 façons</h3>
+                            <h3>Gaufres en 3 façons</h3>
                         </div>
                     </div>
                 </div>
