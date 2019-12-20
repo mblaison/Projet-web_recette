@@ -78,17 +78,21 @@
                 <label for="titre">Titre de la recette : </label>
                 <input required type="text" name="titre" placeholder="Tarte aux pommes">
 
-                <div class="radio">
                 <label for="type_plat"> Type de la recette : <label>
-                <input type="radio" name="type_plat" value = "Entrée" id="entrée">
-                <label for="entrée">Entrée</label>
+                <p class="radio">
+                    <input type="radio" name="type_plat" value = "Entrée" id="entrée">
+                    <label for="entrée">Entrée</label>
+                </p>
+                
+                <p class="radio">
+                    <input type="radio" name="type_plat" value = "Plat" id="plat">
+                    <label for="plat">Plat</label>
+                </p>
 
-                <input type="radio" name="type_plat" value = "Plat" id="plat">
-                <label for="plat">Plat</label>
-
-                <input type="radio" name="type_plat" value = "Dessert" id="dessert">
-                <label for="dessert">Dessert</label>
-                </div>
+                <p class="radio">
+                    <input type="radio" name="type_plat" value = "Dessert" id="dessert">
+                    <label class="radio" for="dessert">Dessert</label>
+                </p>
                 
                 <label for="type_cuisine"> Type de cuisine : </label>
                 <p><select required name = "type_cuisine" id="type_cuisine">

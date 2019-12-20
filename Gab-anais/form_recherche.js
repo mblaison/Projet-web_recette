@@ -27,20 +27,27 @@ window.addEventListener("DOMContentLoaded", function() {
                       
                   // titre + image
                   "<div class=\"intro-item\">" + 
-                    "<img src=" + recipe[i].image + ">" + "<h2>" + recipe[i].titre + "</h2" +
-                    //Temps de préparation + types plat et cuisine
-                    "<div class=\"recipe-time\"" + "<ul> <li> Temps de préparation : " + recipe[i].temps + " min </li>" +
-                      "<li> Type de plat : " + recipe[i].type_plat + "</li>" +
-                      "<li> Type de cuisine : " + recipe[i].type_cuisine + "</li> </ul>" + 
-                    "</div>" + 
+                    "<img src=" + recipe[i].image + ">" + 
+                    "<h2>" + recipe[i].titre + "</h2" +
                   "</div>" +
+                    //Temps de préparation + types plat et cuisine
+                    "<div class=\"recipe-time\">" + 
+                      "<p>Temps de préparation : " + recipe[i].temps + " min </p>" +
+                      "<p> Type de plat : " + recipe[i].type_plat + "</p>" +
+                      "<p> Type de cuisine : " + recipe[i].type_cuisine + "</p>" + 
+                    "</div>" + 
+                  
             
                   // ingrédients
-                  "<div class=\"list-item\">" + 
-                    "<h5> Ingrédients </h5>" + 
-                    "<div class = \"salad-list\">" + recipe[i].ingrédients + "</div>" + 
-                  "</div>" + 
+                  "<div class =\"ingredient-list\">" +
+                    //"<div class=\"list-item\">" + 
+                      "<h3> Ingrédients </h3>" + 
+                      "<p>" + recipe[i].ingrédients + "</p>" + 
+                    //"</div>" + 
+                  "</div>" +
+
                 "</div>" + 
+                
               "</div>" + 
             "</div>" +
 
@@ -50,7 +57,7 @@ window.addEventListener("DOMContentLoaded", function() {
                 "<div class=\"recipe-desc\">" +
                   "<h3> Description </h3>" + 
                   "<p> Auteur : " + recipe[i].auteur + "</br>" + 
-                  "Email :" + recipe[i].email + "</br>" + 
+                  "Email : " + recipe[i].email + "</br>" + 
                   "Ajouté le " + recipe[i].date_ajout + "</p>" + 
                 "</div>" +
                     
