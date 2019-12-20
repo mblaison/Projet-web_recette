@@ -7,6 +7,13 @@ window.addEventListener("DOMContentLoaded", function() {
         var data = new FormData(formulaire); //récupère champs formulaire
         var requete = new XMLHttpRequest();
 
+        requete.onreadystatechange  = function() {
+            if(requete.readyState == 4 && requete.status == 200){
+                // Redirection vers la page d'accueil après la connexion
+                window.location.href = "./recettes.php";
+            }
+        }
+
 		// on envoie la requête à l'URL du webservice
 		requete.open("POST", "form_recette.php");
         requete.send(data);

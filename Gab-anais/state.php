@@ -78,7 +78,7 @@
         echo "Vous êtes connecté <br> <a href=\"deconnexion.php\">Se déconnecter</a>";
     }
     else {
-        echo "Vous n\'êtes plus connecté <br> <a href=\"accueil.php\">Retour à l\'accueil</a>";
+        echo "Vous n'êtes plus connecté <br> <a href=\"accueil.php\">Retour à l'accueil</a>";
     }
     ?>
 
