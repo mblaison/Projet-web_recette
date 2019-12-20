@@ -1252,36 +1252,89 @@ ol {
 
 /* ------- Formulaire ajout de recette -------*/
 .formulaire_ajout {
+	display: block;
 	margin: auto;
-	margin-top: 15px;
-	margin-bottom: 15px;
+	padding-top: 30px;
+	padding-bottom: 30px;
 	position : relative;
-	width : 550px;
+	width : 600px;
 	line-height: 24px;
 	text-decoration: none;
+}
+
+.formulaire_ajout .submit-btn,input,textarea,select {
+	display: block;
+	position : relative;
+	width : 530px;
+}
+
+.formulaire_ajout fieldset {
+	width: 600px;
 }
 
 
 /* ------- Formulaire connexion -------*/
 .formulaire_connexion {
-	margin: auto;
-	margin-top: 15px;
-	margin-bottom: 15px;
-	margin-left: 15px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-left: 100px;
 	position : relative;
 	width : 550px;
 	line-height: 24px;
 	text-decoration: none;
 }
 
-.formulaire_connexion p {
-	margin: auto;
-	margin-top: 30px;
+
+.submit-btn {
+	color: #fff;
+	background: rgb(248, 95, 103);
+	font-size: 14px;
+	font-weight: 600;
+	padding: 5px 20px;
+	border: none;
+	border-radius: 50px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+.formulaire_connexion input {
+	width: 300px;
 }
 
-.formulaire_connexion button {
-	margin: auto;
-	margin-top: 15px;
+input {
+	margin-bottom:20px;
+	border: 1px solid rgb(248, 95, 103);
+	font-size: 14px;
+	font-weight: 400;
+	border-radius: 50px;
+	padding: 5px 20px;
+}
+
+
+textarea {
+	margin-bottom:20px;
+	border: 1px solid rgb(248, 95, 103);
+	font-size: 14px;
+	font-weight: 600;
+	border-radius: 10px;
+	padding: 5px 20px;
+}
+
+fieldset {
+	position: relative;
+	width: 360px;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border: 1px solid;	
+	border-radius:8px;
+}
+
+legend {
+	text-align: center;
+	margin-left: 20px;
+	padding-left: 10px;
 }
 
 

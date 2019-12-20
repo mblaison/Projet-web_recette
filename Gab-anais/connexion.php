@@ -72,16 +72,19 @@
     <!-- Formulaire de connexion -->
     <div class="formulaire_connexion">
         <form id="identification" action="./form_connexion.php" method="post">
+            <fieldset>
+                <legend>Connexion</legend>
+                <label for="login">Login :</label>
+                <input type="text" name="login" placeholder="toto" required>
 
-            <p>Login : </p>
-            <input type="text" name="login" placeholder="toto" required>
+            
+                <label for="mdp">Mot de passe :</label>
+                <input type="password" name="mdp" required>
+            
 
-            <p>Mot de passe : </p>
-            <input type="password" name="mdp" required>
-            <br>
-
-            <button type="submit"> Connexion </button>
-
+                <p><button class = "submit-btn" type="submit"> Connexion </button></p>
+            
+            </fieldset>
         </form>
     </div>
 

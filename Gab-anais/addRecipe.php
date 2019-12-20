@@ -72,11 +72,14 @@
     <!-- Forulaire d'ajout -->
     <div class="formulaire_ajout">
         <form id="ajout_recette" action="./form_recette.php" method="POST">
-            
-            <p>Titre de la recette : </p>
-            <input required type="text" name="titre" placeholder="Tarte aux pommes">
+            <fieldset>
+                <legend> Ajouter une recette </legend>
+                
+                <label for="titre">Titre de la recette : </label>
+                <input required type="text" name="titre" placeholder="Tarte aux pommes">
 
-            <p> Type de la recette : <br/>
+                <div class="radio">
+                <label for="type_plat"> Type de la recette : <label>
                 <input type="radio" name="type_plat" value = "Entrée" id="entrée">
                 <label for="entrée">Entrée</label>
 
@@ -85,49 +88,48 @@
 
                 <input type="radio" name="type_plat" value = "Dessert" id="dessert">
                 <label for="dessert">Dessert</label>
-            </p>
+                </div>
+                
+                <label for="type_cuisine"> Type de cuisine : </label>
+                <p><select required name = "type_cuisine" id="type_cuisine">
+                    <option value=""></option>
+                    <option value="française">Française</option>
+                    <option value="espagnole">Espagnole</option>
+                    <option value="italienne">Italienne</option>
+                    <option value="asiatique">Asiatique</option>
+                    <option value="africaine">Africaine</option>
+                    <option value="maghrébine">Maghrébine</option>
+                    <option value="méditérannéenne">Méditérannéenne</option>
+                    <option value="américaine">Américaine</option>
+                    <option value="anglaise">Anglaise</option>
+                </select></p>
 
-            <p> Type de cuisine : </p>
-            <select required name = "type_cuisine" id="type_cuisine">
-                <option value=""></option>
-                <option value="française">Française</option>
-                <option value="espagnole">Espagnole</option>
-                <option value="italienne">Italienne</option>
-                <option value="asiatique">Asiatique</option>
-                <option value="africaine">Africaine</option>
-                <option value="maghrébine">Maghrébine</option>
-                <option value="méditérannéenne">Méditérannéenne</option>
-                <option value="américaine">Américaine</option>
-                <option value="anglaise">Anglaise</option>
-            </select>
+                <label for="temps">Temps de préparation (en minutes) : </label>
+                <input required type="number" name="temps" placeholder="15">
 
-            <p>Temps de préparation : </p>
-            <input required type="number" name="temps" placeholder="15"> minutes
+                <label for="nb_personne">Nombre de personnes : </label>
+                <input required type="number" name="nb_personne" placeholder="4">
 
-            <p>Nombre de personnes : </p>
-            <input required type="number" name="nb_personne" placeholder="4"> personnes
+                <label for="auteur">Pseudo : </label>
+                <input required type="text" name="auteur" placeholder="toto">
 
-            <p>Pseudo : </p>
-            <input required type="text" name="auteur" placeholder="toto">
+                <label for="email">Adresse mail : </label>
+                <input required type="email" name="email" placeholder="toto.tata@exemple.com">
 
-            <p>Adresse mail : </p>
-            <input required type="email" name="email" placeholder="toto.tata@exemple.com">
+                <label for="ingrédients">Ingrédients : </label>
+                <textarea required name="ingrédients" rows="10" placeholder="pommes, pâte à tarte, ..."></textarea>
 
-            <p>Ingrédients : </p>
-            <textarea required name="ingrédients" rows="10" placeholder="pommes, pâte à tarte, ..."></textarea>
+                <label for="instructions">Instructions de préparation : </legend>
+                <textarea required name="instructions" rows="10" placeholder="Mettre les pommes dans la pâte ..."></textarea>
 
-            <p>Instructions de préparation : </p>
-            <textarea required name="instructions" rows="10" placeholder="Mettre les pommes dans la pâte ..."></textarea>
+                <label for="image">Illustration : </label>
+                <input required type="url" name="image">
 
-            <p>Illustration : </p>
-            <input required type="url" name="image">
+                <label for="date_ajout">Date : </label>
+                <input required type="date" name="date_ajout"> 
 
-            <p>Date : </p>
-            <input required type="date" name="date_ajout"> 
-
-            <p>
-                <input type="submit" value="Valider">
-            </p>
+                <p><button class = "submit-btn" type="submit"> Valider</button></p>
+            </fieldset>
         </form>
     </div>
     
